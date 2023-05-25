@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +16,12 @@ public class Cam : MonoBehaviour
     [SerializeField] private GameObject Abandonner;
     public AudioClip sonClic;
 
+    [SerializeField] private GameObject WinScreen;
+    [SerializeField] private AudioClip reparation;
+    private float wintime;
+    private bool Repaired;
+
+
     void Start()
     {
         ray = new Ray(transform.position, transform.forward * 10);
@@ -29,6 +32,9 @@ public class Cam : MonoBehaviour
         Text.SetActive(false);
         Interaction.SetActive(false);
         ShopPanel.SetActive(false);
+        Repaired = false;
+        WinScreen.SetActive(false);
+        wintime = 0;
     }
 
     // Update is called once per frame
@@ -39,8 +45,14 @@ public class Cam : MonoBehaviour
             QuetesAcheve+= 1;
         }
 
+        if (wintime != 0 && Time.time - wintime > 10)
+        {
+            Debug.Log("vous avez gagné");
+            WinScreen.SetActive(true);
+        }
+
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3) && !Repaired)
         {
             if (hit.collider.gameObject.CompareTag("Quete"))
             {
@@ -102,6 +114,26 @@ public class Cam : MonoBehaviour
                     ShopPanel.SetActive(true);
                 }
             }
+            else if (hit.collider.gameObject.CompareTag("Drink"))
+            {
+                Interaction.GetComponentInChildren<Text>().text = "Drink";
+                Interaction.SetActive(true);
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Drink();
+                }
+            }
+            else if (hit.collider.gameObject.CompareTag("Port"))
+            {
+                Interaction.GetComponentInChildren<Text>().text = "Repair";
+                Interaction.SetActive(true);
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Repair();
+                }
+            }
             else
             {
                 Interaction.SetActive(false);
@@ -110,6 +142,7 @@ public class Cam : MonoBehaviour
         else
         {
             Interaction.SetActive(false);
+            ShopPanel.SetActive(false);
         }
     }
 
@@ -118,7 +151,7 @@ public class Cam : MonoBehaviour
         return QuetesAcheve;
     }
 
-    public void Accept()
+    private void Accept()
     {
         if (QueteManagement.QuetesActuelle == null)
         {
@@ -149,30 +182,30 @@ public class Cam : MonoBehaviour
         }
     }
 
-    public void Close()
+    private void Close()
     {
         Text.SetActive(false);
     }
 
-    public void CloseShop()
+    private void CloseShop()
     {
         ShopPanel.SetActive(false);
     }
 
-    public void Kill()
+    private void Kill()
     {
         Text.SetActive(false);
         player.ReceiveDamages(player.GetHealth());
         Close();
     }
 
-    public void Abandon()
+    private void Abandon()
     {
         QueteManagement.QuetesActuelle = null;
         Close();
     }
 
-    public void Termine()
+    private void Termine()
     {
         if(Inventory.instance.Search(QueteManagement.QuetesActuelle.ItemToBring) && QueteManagement.QuetesActuelle.ActionRequise)
         {
@@ -186,8 +219,22 @@ public class Cam : MonoBehaviour
         Close();
     }
 
-    public void BruitDuBouton()
+    private void BruitDuBouton()
     {
         GetComponent<AudioSource>().PlayOneShot(sonClic);
+    }
+
+    private void Drink()
+    {
+        PlayerStats.instance.currentWater = PlayerStats.instance.maxWater;
+        Debug.Log("Vous avez bu");
+    }
+
+    private void Repair()
+    {
+        var time = Time.time;
+        GetComponent<AudioSource>().PlayOneShot(reparation);
+        wintime = Time.time;
+        Repaired = true;
     }
 }
