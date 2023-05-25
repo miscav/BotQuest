@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1caec1557ee254b82f33f30ca6afda, type: 3}
+  m_Name: QueteBoussole
+  m_EditorClassIdentifier: 
+  RewardItem: {fileID: 0}
+  RewardMoney: 10
+  text: "Voici ma premiere mission qui va beaucoup t'aider. Je te propose d'aller
+    chercher une boussole cach\xE9 dans le village."
+  ItemToBring: {fileID: 11400000, guid: 60b74351d2e829642b89c4225e9b4a14, type: 2}
+  ActionRequise: 1
+  Requis: 1

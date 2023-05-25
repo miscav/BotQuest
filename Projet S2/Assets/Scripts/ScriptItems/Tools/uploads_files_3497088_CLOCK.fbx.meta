@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: d50aed8ff386b84448b4072aef700a75
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ARROW HOUR
+    second: {fileID: 2100000, guid: da30a79b41514234b893a239996bf5b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ARROW MINUTE
+    second: {fileID: 2100000, guid: 7722a4e2029cd2243ba65f546b780e72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ARROW SECONDS
+    second: {fileID: 2100000, guid: 1f075a0c2dd61144f805c0d0d0206807, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BOLTS
+    second: {fileID: 2100000, guid: 53f746b1fb2d9434ebe8af98ca48951c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CLOCK
+    second: {fileID: 2100000, guid: 2e483e31fad2f1445a4319cb48ada807, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GLASS
+    second: {fileID: 2100000, guid: 2b045400bcd124a4ea0cf852d2dbe542, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TABLO
+    second: {fileID: 2100000, guid: 0ffd4359b98ed844a917fadd8f9b69c0, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW HOUR_BaseColor
+    second: {fileID: 2800000, guid: 0ac63078552256b47a9576c3c58d618d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW HOUR_Metallic
+    second: {fileID: 2800000, guid: 0b861f1ec77da1245ab1ffcf9fb62da8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW HOUR_Normal
+    second: {fileID: 2800000, guid: 12cd9699ad7b9cd43a9a2d2108220561, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW HOUR_Roughness
+    second: {fileID: 2800000, guid: baf895189c2c32d408f1a5f07c9e35c9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW MINUTE_BaseColor
+    second: {fileID: 2800000, guid: 240d961917b390343b8638685648d21f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW MINUTE_Metallic
+    second: {fileID: 2800000, guid: f87b5ffefabd1824eb1e0e5678dc3d41, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW MINUTE_Normal
+    second: {fileID: 2800000, guid: 4578df6f60c1e5d45a3e8794b2459493, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW MINUTE_Roughness
+    second: {fileID: 2800000, guid: 81b5763cfa279644ba9f805d39870453, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW SECONDS_BaseColor
+    second: {fileID: 2800000, guid: 927efc66d0d8b3042a613e470f939519, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW SECONDS_Metallic
+    second: {fileID: 2800000, guid: bf86fa15857d89049b6b72d83046e68d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW SECONDS_Normal
+    second: {fileID: 2800000, guid: cd409abfac9a8ff4ebcceb3983fb18d5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_ARROW SECONDS_Roughness
+    second: {fileID: 2800000, guid: 6b6f3063251755b428ecf0eb9d655183, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_BOLTS_BaseColor
+    second: {fileID: 2800000, guid: e07470c75df5e7e47bde9bbe88479dd6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_BOLTS_Metallic
+    second: {fileID: 2800000, guid: f6f0cae39a6f2b14087dffd55dcc93dc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_BOLTS_Normal
+    second: {fileID: 2800000, guid: 9269b146d1074c9459fe2fee53e58c33, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_BOLTS_Roughness
+    second: {fileID: 2800000, guid: ab32d7985c276734aa8dcfb57ace2b0f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_CLOCK_BaseColor
+    second: {fileID: 2800000, guid: a3fbba51ad201014cbb69b0059d12873, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_CLOCK_Metallic
+    second: {fileID: 2800000, guid: 243e1fe38a760be40874f086d38b679e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_CLOCK_Normal
+    second: {fileID: 2800000, guid: aacf434f903dee94a871c0055a866e18, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CLOCK_CLOCK_Roughness
+    second: {fileID: 2800000, guid: 382e23c623977f141a537397f6dd28fd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tablo-base-color
+    second: {fileID: 2800000, guid: 0075a0d5774cf1541b8f0005054e95a2, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1caec1557ee254b82f33f30ca6afda, type: 3}
+  m_Name: fisherman
+  m_EditorClassIdentifier: 
+  RewardItem: {fileID: 0}
+  RewardMoney: 50
+  text: "Oh, un humain, cela faisait une \xE9ternit\xE9 que je n'en avait pas vu.
+    Depuis que les robots hostils ont pris le contr\xF4le de l'\xEEle, je me suis
+    exil\xE9 et je p\xEAche toute la journ\xE9e, d'ailleurs, j'ai perdu ma canne
+    \xE0 p\xEAche, peux tu la trouver, et je te donnerais un de ces vieux trucs qui
+    tra\xEEnent dans ma cabane, peut \xEAtre bien que cela t'aidera \xE0 partir de
+    cette \xEEle maudite..."
+  ItemToBring: {fileID: 11400000, guid: 828c616151b4e3e4e965ea8d3bc939af, type: 2}
+  ActionRequise: 0
+  Requis: 0

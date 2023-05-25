@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1caec1557ee254b82f33f30ca6afda, type: 3}
+  m_Name: Intro
+  m_EditorClassIdentifier: 
+  RewardItem: {fileID: 0}
+  RewardMoney: 50
+  text: "Sois le bienvenue humain ! Si tu te trouves ici devant moi c'est s\xFBrement
+    que tu dois vouloir t'enfuir de cette \xEEle n'est ce pas ? Il n'existe qu'une
+    seule mani\xE8re de quitter cette \xEEle et pour ce faire tu vas devoir r\xE9unir
+    toutes les pi\xE8ces n\xE9cessaires \xE0 r\xE9parer un b\xE2teau qui se trouve
+    \xE0 l'oppos\xE9 de cette \xEEle. Tu vas donc devoir r\xE9aliser de multiples
+    qu\xEAtes, il en existe deux types principales. Certaines vont te permettre d'obtenir
+    des \xE9l\xE9ments n\xE9cessaires \xE0 ta survie tels que de la nourriture ou
+    des armes. Les autres qu\xEAtes vont donc te permettre d'obtenir toutes ces pi\xE8ces
+    n\xE9cessaires \xE0 la r\xE9paration du b\xE2teau."
+  ItemToBring: {fileID: 0}
+  ActionRequise: 0
+  Requis: 0
