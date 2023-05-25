@@ -12,6 +12,7 @@ TagManager:
   - VolcanTrou
   - Port
   - Shop
+  - Drink
   layers:
   - Default
   - TransparentFX
