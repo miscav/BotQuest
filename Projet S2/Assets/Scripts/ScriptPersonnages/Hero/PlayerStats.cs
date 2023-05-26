@@ -3,12 +3,12 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    public Player player;
+    private Player player;
     public static PlayerStats instance;
 
     public AudioClip sonmort;
     public AudioClip sondegat;
-    public bool IsAlive;
+    private bool IsAlive;
     float prochaine;
     [Header("HP")]
     [SerializeField]
@@ -34,15 +34,15 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Water")]
     [SerializeField]
-    public float maxWater = 100f;
-    public float currentWater;
+    private float maxWater = 100f;
+    private float currentWater;
 
     [SerializeField]
     private Image WaterFill;
 
     [SerializeField]
     private float WaterDecreaseRate;
-    void Start()
+    private void Start()
     {
         currentHealth = maxHealth;
         currentHunger = maxHunger;
@@ -55,14 +55,15 @@ public class PlayerStats : MonoBehaviour
         HealthDecreaseRateForWaterAndHunger= 0.5f;
 
         instance = this;
+        player = gameObject.GetComponent<Player>();
     }
 
-    void Update()
+    private void Update()
     {
         UpdateHungerAndWaterBar();
     }
 
-    void TakeDamage(float damage, bool overTime = false)
+    private void TakeDamage(float damage, bool overTime = false)
     {
         if(Time.time > prochaine)
         {
@@ -87,12 +88,12 @@ public class PlayerStats : MonoBehaviour
         UpdateHPbar();
     }
 
-    void UpdateHPbar()
+    private void UpdateHPbar()
     {
         HealthFill.fillAmount = currentHealth / maxHealth;
     }
 
-    void UpdateHungerAndWaterBar()
+    private void UpdateHungerAndWaterBar()
     {
         // Diminue la faim au fil du temps et le visuel
         currentHunger -= hungerDecreaseRate * Time.deltaTime;
@@ -110,5 +111,15 @@ public class PlayerStats : MonoBehaviour
         {
             TakeDamage((currentHunger <= 0 & currentWater <= 0 ? HealthDecreaseRateForWaterAndHunger * 2 : HealthDecreaseRateForWaterAndHunger),true);
         }
+    }
+
+    public void ReceiveDamage(float damage)
+    {
+        currentHealth -= damage;
+    }
+
+    public void Drink()
+    {
+        currentWater = maxWater;
     }
 }

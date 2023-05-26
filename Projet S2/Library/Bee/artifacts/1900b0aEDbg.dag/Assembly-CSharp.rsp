@@ -514,6 +514,7 @@
 "Assets/Scripts/ScriptQuetes/quetes/Secondaire.cs"
 "Assets/Scripts/ScriptShop/Article.cs"
 "Assets/Scripts/ScriptShop/Shop.cs"
+"Assets/Scripts/ScriptShop/SlotShop.cs"
 "Assets/SonQuete.cs"
 "Assets/test.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"

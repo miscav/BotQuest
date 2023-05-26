@@ -18,6 +18,9 @@ public class Player : Personnages
     private float time1;
     private float time2;
     private float time3;
+    public float rotateSpeed = 180.0f;
+
+    [SerializeField] private GameObject BalancePanel;
 
     public static Player player;
 
@@ -39,6 +42,11 @@ public class Player : Personnages
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            AddBalance(1000);
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             time1 = Time.time;
@@ -133,7 +141,8 @@ public class Player : Personnages
 
     public void AddBalance(int balance)
     {
-        if (balance > 0) Balance += balance;
+        Balance += balance;
+        RefreshBalance();
     }
 
     public void Eat(ItemsData item)
@@ -151,7 +160,23 @@ public class Player : Personnages
         }
     }
 
-    public float rotateSpeed = 180.0f;
+    private void RefreshBalance()
+    {
+        string BalanceText = "";
+        string Bal = Balance.ToString();
+        int l = Bal.Length;
 
+        for (int i = l-1;i >= 0; i--)
+        {
+            BalanceText = Bal[i] + BalanceText;
+
+            if ((l - i) % 3 == 0 && l - 1 != i)
+            {
+                BalanceText = " " + BalanceText;
+            }
+        }
+
+        BalancePanel.GetComponentInChildren<Text>().text = $"{BalanceText} $";
+    }
 }
 

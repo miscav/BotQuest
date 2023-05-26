@@ -27,16 +27,12 @@ public class ActionTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("qqch");
         if (other.CompareTag("Item"))
         {
+            Debug.Log("item");
             PickUpPanel.GetComponentInChildren<Text>().text = "Pick Up";
             Item = other.gameObject;
-            PickUpPanel.SetActive(true);
-        }
-
-        if (other.CompareTag("Shop"))
-        {
-            PickUpPanel.GetComponentInChildren<Text>().text = "Shopping";
             PickUpPanel.SetActive(true);
         }
     }
@@ -46,11 +42,6 @@ public class ActionTrigger : MonoBehaviour
         if (other.CompareTag("Item"))
         {
             Item = null;
-            PickUpPanel.SetActive(false);
-        }
-
-        if (other.CompareTag("Shop"))
-        {
             PickUpPanel.SetActive(false);
         }
     }

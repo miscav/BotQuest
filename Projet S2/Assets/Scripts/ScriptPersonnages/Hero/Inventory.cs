@@ -47,9 +47,14 @@ public class Inventory : MonoBehaviour
         CloseActionItemPanel();
     }
 
+    public int length()
+    {
+        return Content.Count;
+    }
+
     public void Add(ItemsData item)
     {
-        if(item != null)
+        if(item != null && length() < 16)
         {
             Content.Add(item);
             Refresh();
@@ -61,12 +66,17 @@ public class Inventory : MonoBehaviour
         return item == null || Content.Contains(item);
     }
 
+    public int Qte(ItemsData item)
+    {
+        var list = Content.FindAll(i => i.Name == item.Name);
+
+        return list.Count;
+    }
+
     public void Remove(ItemsData item) 
     {
-        Debug.Log(item.Name);
         if(Search(item) && item != null)
         {
-            Debug.Log(Content.FindIndex(i => i.Name == item.Name));
             Content.RemoveAt(Content.FindIndex(i => i.Name == item.Name));
             Refresh();
         }
@@ -88,13 +98,13 @@ public class Inventory : MonoBehaviour
         {
             Slot slot = SlotContent.transform.GetChild(i).GetComponent<Slot>();
             slot.Item = Content[i];
-            slot.Visual.sprite = Content[i].Visual;
+            slot.Visual = Content[i].Visual;
         }
         for (int i = Content.Count; i < 16; i++)
         {
             Slot slot = SlotContent.transform.GetChild(i).GetComponent<Slot>();
             slot.Item = null;
-            slot.Visual.sprite = Transparent;
+            slot.Visual = Transparent;
         }
     }
 

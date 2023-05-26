@@ -1,16 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
     public ItemsData Item;
     public static ItemsData ItemSelected;
-    public Image Visual;
+    public Sprite Visual;
     [SerializeField] private GameObject Player;
+
 
     public void OnClickSlot()
     {

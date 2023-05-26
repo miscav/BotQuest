@@ -3,8 +3,9 @@ using UnityEngine.UI;
 
 public class Cam : MonoBehaviour
 {
-    [SerializeField] Player player;
-    [SerializeField] Ray ray;
+    private Player player;
+    private PlayerStats playerStats;
+    private Ray ray;
     [SerializeField] GameObject Interaction;
     [SerializeField] GameObject Text;
     [SerializeField] private GameObject ShopPanel;
@@ -35,6 +36,8 @@ public class Cam : MonoBehaviour
         Repaired = false;
         WinScreen.SetActive(false);
         wintime = 0;
+        player = gameObject.GetComponentInParent<Player>();
+        playerStats = gameObject.GetComponentInParent<PlayerStats>();
     }
 
     // Update is called once per frame
@@ -106,6 +109,7 @@ public class Cam : MonoBehaviour
             }
             else if (hit.collider.gameObject.CompareTag("Shop"))
             {
+                hit.collider.gameObject.GetComponent<Shop>().Reload();
                 Interaction.GetComponentInChildren<Text>().text = "Shop";
                 Interaction.SetActive(true);
 
@@ -121,7 +125,7 @@ public class Cam : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Drink();
+                    playerStats.Drink();
                 }
             }
             else if (hit.collider.gameObject.CompareTag("Port"))
@@ -142,7 +146,6 @@ public class Cam : MonoBehaviour
         else
         {
             Interaction.SetActive(false);
-            ShopPanel.SetActive(false);
         }
     }
 
@@ -222,12 +225,6 @@ public class Cam : MonoBehaviour
     private void BruitDuBouton()
     {
         GetComponent<AudioSource>().PlayOneShot(sonClic);
-    }
-
-    private void Drink()
-    {
-        PlayerStats.instance.currentWater = PlayerStats.instance.maxWater;
-        Debug.Log("Vous avez bu");
     }
 
     private void Repair()
