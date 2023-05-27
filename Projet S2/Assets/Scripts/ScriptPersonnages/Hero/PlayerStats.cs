@@ -49,6 +49,10 @@ public class PlayerStats : MonoBehaviour
     private float WaterDecreaseRate;
     private void Start()
     {
+        ChatPannel = GameObject.Find("CameraPlayer").GetComponent<Cam>().ChatPanel;
+        HealthFill=GameObject.Find("Canvas/ATH/HP/HealthFill").GetComponent<Image>();
+        HungerFill = GameObject.Find("Canvas/ATH/Hunger/HungerFill").GetComponent<Image>();
+        WaterFill = GameObject.Find("Canvas/ATH/Water/WaterFill").GetComponent<Image>();
         currentHealth = maxHealth;
         currentHunger = maxHunger;
         currentWater = maxWater;

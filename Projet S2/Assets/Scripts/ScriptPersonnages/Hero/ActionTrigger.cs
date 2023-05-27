@@ -1,3 +1,4 @@
+using Photon.Chat;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class ActionTrigger : MonoBehaviour
 
     private void Start()
     {
+        PickUpPanel = GameObject.Find("CameraPlayer").GetComponent<Cam>().PickUpPanel;
         PickUpPanel.SetActive(false);
         Item = null;
     }

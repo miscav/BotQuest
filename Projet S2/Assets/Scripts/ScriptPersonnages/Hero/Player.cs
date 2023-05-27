@@ -1,3 +1,4 @@
+using Photon.Chat;
 using Photon.Pun;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class Player : Personnages
     public AudioClip sonmarche;
     public float delaybetweenstep;
     private float nextPlay;
-    //[SerializeField] private Image Boussole;
+    [SerializeField] private Image Boussole;
     private bool IsGrounded;
     public bool ischeated;
     private float time1;
@@ -21,16 +22,19 @@ public class Player : Personnages
     private float time3;
     private float cheatedtime;
     public float rotateSpeed = 180.0f;
-    //[SerializeField] private GameObject ChatPannel;
+    [SerializeField] private GameObject ChatPannel;
 
-    //[SerializeField] private GameObject BalancePanel;
+    [SerializeField] private GameObject BalancePanel;
 
     public static Player player;
 
     void Start()
     {
-        //ChatPannel = GameObject.Find("ChatPanel");
-        //Debug.Log(ChatPannel.name);
+        BalancePanel = GameObject.Find("Canvas/BalancePanel");
+        ChatPannel = GameObject.Find("CameraPlayer").GetComponent<Cam>().ChatPanel;
+        Boussole = GameObject.Find("Canvas/Boussole").GetComponent<Image>();
+
+        Debug.Log(ChatPannel.name);
         IsGrounded = false;
         Health = 200f;
         Coordinates = new Vector3(0, 0, 0);
@@ -76,9 +80,9 @@ public class Player : Personnages
                 if (time3 != 0 && Time.time - time3 < 2 && time3 > time2)
                 {
                     Debug.Log("vous vous désormais cheaté");
-                    //ChatPannel.GetComponent<Text>().text = "With great power comes great responsibility";
+                    ChatPannel.GetComponent<Text>().text = "With great power comes great responsibility";
                     cheatedtime = Time.time;
-                    //ChatPannel.SetActive(true);
+                    ChatPannel.SetActive(true);
                     ischeated = true;
                     Speed = Speed * 4;
                 }
@@ -86,17 +90,17 @@ public class Player : Personnages
 
             if (cheatedtime != 0 && Time.time - cheatedtime > 3)
             {
-                //ChatPannel.SetActive(false);
+                ChatPannel.SetActive(false);
                 cheatedtime = 0;
             }
 
             if (Cam.GetQueteAcheve() > 1)
             {
-                //Boussole.gameObject.SetActive(true);
+                Boussole.gameObject.SetActive(true);
             }
             else
             {
-                //Boussole.gameObject.SetActive(false);
+                Boussole.gameObject.SetActive(false);
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -139,7 +143,7 @@ public class Player : Personnages
             run = 1f;
 
             transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.fixedDeltaTime * rotateSpeed);
-            //Boussole.transform.Rotate(new Vector3(0, 0, Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed);
+            Boussole.transform.Rotate(new Vector3(0, 0, Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed);
         }
         
     }
@@ -194,7 +198,7 @@ public class Player : Personnages
             }
         }
 
-        //BalancePanel.GetComponentInChildren<Text>().text = $"{BalanceText} $";
+        BalancePanel.GetComponentInChildren<Text>().text = $"{BalanceText} $";
     }
 }
 

@@ -2473,6 +2473,7 @@ MonoBehaviour:
   Interaction: {fileID: 0}
   Text: {fileID: 0}
   ShopPanel: {fileID: 0}
+  PickUpPanel: {fileID: 0}
   QueteVise: {fileID: 0}
   Accepter: {fileID: 0}
   Refuser: {fileID: 0}
@@ -2814,8 +2815,11 @@ MonoBehaviour:
   Health: 0
   sonmarche: {fileID: 8300000, guid: b4cc762f8b5c9c34aa7948d1b04bb76c, type: 3}
   delaybetweenstep: 0
+  Boussole: {fileID: 0}
   ischeated: 0
   rotateSpeed: 180
+  ChatPannel: {fileID: 0}
+  BalancePanel: {fileID: 0}
 --- !u!143 &3144255603923012727
 CharacterController:
   m_ObjectHideFlags: 0

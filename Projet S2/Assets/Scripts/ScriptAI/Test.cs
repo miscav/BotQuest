@@ -41,7 +41,8 @@ public class Test : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        player = GameObject.Find("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        //player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 

@@ -9,6 +9,7 @@ public class Cam : MonoBehaviour
     [SerializeField] GameObject Interaction;
     [SerializeField] GameObject Text;
     [SerializeField] private GameObject ShopPanel;
+    [SerializeField] public GameObject PickUpPanel;
     [SerializeField] private static int QuetesAcheve;
     [SerializeField] private QueteManagement QueteVise;
     [SerializeField] private GameObject Accepter;
@@ -16,7 +17,7 @@ public class Cam : MonoBehaviour
     [SerializeField] private GameObject Terminer;
     [SerializeField] private GameObject Abandonner;
     public AudioClip sonClic;
-    [SerializeField] private GameObject ChatPanel;
+    [SerializeField] public GameObject ChatPanel;
     private float chattime;
 
     [SerializeField] private GameObject WinScreen;
@@ -38,8 +39,10 @@ public class Cam : MonoBehaviour
         Repaired = false;
         WinScreen.SetActive(false);
         wintime = 0;
-        player = gameObject.GetComponentInParent<Player>();
-        playerStats = gameObject.GetComponentInParent<PlayerStats>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<Player>();
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<PlayerStats>();
+        //player = gameObject.GetComponentInParent<Player>();
+        //playerStats = gameObject.GetComponentInParent<PlayerStats>();
         ChatPanel.SetActive(false);
         chattime= 0;
     }
