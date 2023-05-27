@@ -21,5 +21,5 @@ MonoBehaviour:
     tra\xEEnent dans ma cabane, peut \xEAtre bien que cela t'aidera \xE0 partir de
     cette \xEEle maudite..."
   ItemToBring: {fileID: 11400000, guid: 828c616151b4e3e4e965ea8d3bc939af, type: 2}
-  ActionRequise: 0
-  Requis: 0
+  ActionRequise: 1
+  Requis: 2

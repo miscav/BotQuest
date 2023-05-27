@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using UnityEngine;
 
 public class QueteManagement : MonoBehaviour
@@ -10,11 +11,27 @@ public class QueteManagement : MonoBehaviour
     [SerializeField] public static Player player;
     [SerializeField] public static Inventory inventory;
     [SerializeField] public bool Init;
-
+    [SerializeField] private GameObject quetepanel;
+        
     private void Start()
     {
         Init = false;
         QuetesActuelle = null;
+        quetepanel.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if(QuetesActuelle == null)
+        {
+            Debug.Log("non");
+            quetepanel.SetActive(false);
+        }
+        else
+        {
+            quetepanel.SetActive(true);
+            Debug.Log("oui");
+        }
     }
 
     public void Reussi(ItemsData itemToBring)

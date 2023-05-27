@@ -16,6 +16,8 @@ public class Cam : MonoBehaviour
     [SerializeField] private GameObject Terminer;
     [SerializeField] private GameObject Abandonner;
     public AudioClip sonClic;
+    [SerializeField] private GameObject ChatPanel;
+    private float chattime;
 
     [SerializeField] private GameObject WinScreen;
     [SerializeField] private AudioClip reparation;
@@ -38,6 +40,8 @@ public class Cam : MonoBehaviour
         wintime = 0;
         player = gameObject.GetComponentInParent<Player>();
         playerStats = gameObject.GetComponentInParent<PlayerStats>();
+        ChatPanel.SetActive(false);
+        chattime= 0;
     }
 
     // Update is called once per frame
@@ -48,10 +52,17 @@ public class Cam : MonoBehaviour
             QuetesAcheve+= 1;
         }
 
+        if(chattime!=0 && Time.time - chattime > 3) 
+        {
+            ChatPanel.SetActive(false);
+            chattime = 0;
+        }
+
         if (wintime != 0 && Time.time - wintime > 10)
         {
             Debug.Log("vous avez gagné");
             WinScreen.SetActive(true);
+            player.ischeated = true;
         }
 
         RaycastHit hit;
@@ -88,6 +99,9 @@ public class Cam : MonoBehaviour
                             }
                             else
                             {
+                                ChatPanel.GetComponent<Text>().text = "Une quête est déjà en cours !";
+                                ChatPanel.SetActive(true);
+                                chattime = Time.time;
                                 Debug.Log("Quete déjà en cours !");
                             }
                         }
@@ -103,6 +117,9 @@ public class Cam : MonoBehaviour
                     }
                     else
                     {
+                        ChatPanel.GetComponent<Text>().text = "Vous avez déjà fait cette quête !";
+                        ChatPanel.SetActive(true);
+                        chattime = Time.time;
                         Debug.Log("Plus de quetes disponibles");
                     }
                 }
@@ -165,12 +182,15 @@ public class Cam : MonoBehaviour
                     QuetesAcheve++;
                     QueteVise.Reussi(null);
                 }
-                else if (((Principale)QueteVise.quete.Peek()).Requis == QuetesAcheve)
+                else if (((Principale)QueteVise.quete.Peek()).Requis <= QuetesAcheve)
                 {
                     QueteManagement.QuetesActuelle = QueteVise.quete.Peek();
                 }
                 else
                 {
+                    ChatPanel.GetComponent<Text>().text = "Vous devez effectuez les quetes principales précédantes avant celle ci !";
+                    ChatPanel.SetActive(true);
+                    chattime = Time.time;
                     Debug.Log("Vous devez effectuez les quetes principales précédantes avant celle ci !");
                 }
             }
@@ -204,6 +224,9 @@ public class Cam : MonoBehaviour
 
     private void Abandon()
     {
+        ChatPanel.GetComponent<Text>().text = "Vous avez bien abandonné la quête en cours !";
+        ChatPanel.SetActive(true);
+        chattime = Time.time;
         QueteManagement.QuetesActuelle = null;
         Close();
     }
@@ -212,11 +235,17 @@ public class Cam : MonoBehaviour
     {
         if(Inventory.instance.Search(QueteManagement.QuetesActuelle.ItemToBring) && QueteManagement.QuetesActuelle.ActionRequise)
         {
+            ChatPanel.GetComponent<Text>().text = "Bien joué, voilà votre récompense !";
+            ChatPanel.SetActive(true);
+            chattime = Time.time;
             QuetesAcheve++;
             QueteVise.Reussi(QueteManagement.QuetesActuelle.ItemToBring);
         }
         else
         {
+            ChatPanel.GetComponent<Text>().text = "Vous n'avez pas terminé la quete !";
+            ChatPanel.SetActive(true);
+            chattime = Time.time;
             Debug.Log("Vous n'avez pas terminé la quete !");
         }
         Close();

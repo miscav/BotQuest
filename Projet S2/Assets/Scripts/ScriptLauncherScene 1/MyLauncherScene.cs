@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Photon.Realtime;
 using Photon.Pun;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MyLauncherScene : MonoBehaviourPunCallbacks
 {
@@ -20,6 +21,29 @@ public class MyLauncherScene : MonoBehaviourPunCallbacks
         PhotonNetwork.AutomaticallySyncScene = true;
     }
 
+    private void Start()
+    {
+        //Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("CreditsScene");
+    }
     public void Connect()
     {
         logText.text = "";

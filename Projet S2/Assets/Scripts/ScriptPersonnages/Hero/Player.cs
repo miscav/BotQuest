@@ -18,7 +18,9 @@ public class Player : Personnages
     private float time1;
     private float time2;
     private float time3;
+    private float cheatedtime;
     public float rotateSpeed = 180.0f;
+    [SerializeField] private GameObject ChatPannel;
 
     [SerializeField] private GameObject BalancePanel;
 
@@ -69,9 +71,18 @@ public class Player : Personnages
             if (time3 != 0 && Time.time - time3 < 2 && time3 > time2)
             {
                 Debug.Log("vous vous désormais cheaté");
+                ChatPannel.GetComponent<Text>().text = "With great power comes great responsibility";
+                cheatedtime = Time.time;
+                ChatPannel.SetActive(true);
                 ischeated = true;
                 Speed = Speed * 4;
             }
+        }
+
+        if(cheatedtime != 0 && Time.time - cheatedtime > 3)
+        {
+            ChatPannel.SetActive(false);
+            cheatedtime = 0;
         }
 
         if (Cam.GetQueteAcheve() > 1)

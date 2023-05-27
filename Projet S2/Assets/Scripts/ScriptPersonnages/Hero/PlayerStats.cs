@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,10 @@ public class PlayerStats : MonoBehaviour
 {
     private Player player;
     public static PlayerStats instance;
+    [SerializeField]  public AudioClip Boire;
+    private float drinktime;
+    private float drunktime;
+    [SerializeField] GameObject ChatPannel;
 
     public AudioClip sonmort;
     public AudioClip sondegat;
@@ -56,11 +61,29 @@ public class PlayerStats : MonoBehaviour
 
         instance = this;
         player = gameObject.GetComponent<Player>();
+        drinktime = 0;
+        ChatPannel.SetActive(false);
     }
 
     private void Update()
     {
         UpdateHungerAndWaterBar();
+        var time =Time.time;
+
+        if (drinktime != 0 && time - drinktime > 3)
+        {
+            drinktime = 0;
+            currentWater = maxWater;
+            ChatPannel.GetComponent<Text>().text = "Vous êtes maintenant désaltéré !";
+            ChatPannel.SetActive(true);
+            drunktime= Time.time;
+        }
+
+        if(drunktime != 0 && Time.time- drunktime > 3) 
+        {
+            drunktime = 0;
+            ChatPannel.SetActive(false);
+        }
     }
 
     private void TakeDamage(float damage, bool overTime = false)
@@ -120,6 +143,7 @@ public class PlayerStats : MonoBehaviour
 
     public void Drink()
     {
-        currentWater = maxWater;
+        GetComponent<AudioSource>().PlayOneShot(Boire);
+        drinktime = Time.time;
     }
 }
