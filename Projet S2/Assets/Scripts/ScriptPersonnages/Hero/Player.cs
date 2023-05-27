@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +13,7 @@ public class Player : Personnages
     public AudioClip sonmarche;
     public float delaybetweenstep;
     private float nextPlay;
-    [SerializeField] private Image Boussole;
+    //[SerializeField] private Image Boussole;
     private bool IsGrounded;
     public bool ischeated;
     private float time1;
@@ -20,14 +21,16 @@ public class Player : Personnages
     private float time3;
     private float cheatedtime;
     public float rotateSpeed = 180.0f;
-    [SerializeField] private GameObject ChatPannel;
+    //[SerializeField] private GameObject ChatPannel;
 
-    [SerializeField] private GameObject BalancePanel;
+    //[SerializeField] private GameObject BalancePanel;
 
     public static Player player;
 
     void Start()
     {
+        //ChatPannel = GameObject.Find("ChatPanel");
+        //Debug.Log(ChatPannel.name);
         IsGrounded = false;
         Health = 200f;
         Coordinates = new Vector3(0, 0, 0);
@@ -44,97 +47,101 @@ public class Player : Personnages
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
+        if (photonView.IsMine)
         {
-            AddBalance(1000);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            time1 = Time.time;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            if (time1 != 0 && Time.time - time1 < 2)
-                time2 = Time.time;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            if (time2 != 0 && Time.time - time2 < 2 && time2 > time1)
-                time3 = Time.time;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            if (time3 != 0 && Time.time - time3 < 2 && time3 > time2)
+            if (Input.GetKeyDown(KeyCode.O))
             {
-                Debug.Log("vous vous désormais cheaté");
-                ChatPannel.GetComponent<Text>().text = "With great power comes great responsibility";
-                cheatedtime = Time.time;
-                ChatPannel.SetActive(true);
-                ischeated = true;
-                Speed = Speed * 4;
+                AddBalance(1000);
             }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                time1 = Time.time;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                if (time1 != 0 && Time.time - time1 < 2)
+                    time2 = Time.time;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                if (time2 != 0 && Time.time - time2 < 2 && time2 > time1)
+                    time3 = Time.time;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                if (time3 != 0 && Time.time - time3 < 2 && time3 > time2)
+                {
+                    Debug.Log("vous vous désormais cheaté");
+                    //ChatPannel.GetComponent<Text>().text = "With great power comes great responsibility";
+                    cheatedtime = Time.time;
+                    //ChatPannel.SetActive(true);
+                    ischeated = true;
+                    Speed = Speed * 4;
+                }
+            }
+
+            if (cheatedtime != 0 && Time.time - cheatedtime > 3)
+            {
+                //ChatPannel.SetActive(false);
+                cheatedtime = 0;
+            }
+
+            if (Cam.GetQueteAcheve() > 1)
+            {
+                //Boussole.gameObject.SetActive(true);
+            }
+            else
+            {
+                //Boussole.gameObject.SetActive(false);
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                run = 1.5f;
+            }
+
+            Coordinates = transform.position;
+
+            if (Character.velocity.y < 0 && Character.isGrounded) playerVelocity.y = 0f;
+
+            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Character.Move(transform.right * move.x * Time.deltaTime * Speed * run);
+            Character.Move(transform.forward * move.z * Time.deltaTime * Speed * run);
+            ReduiceHungry(Time.deltaTime * run);
+
+            if (move != new Vector3(0, 0, 0) && Time.time > nextPlay && Character.isGrounded)
+            {
+                nextPlay = Time.time + delaybetweenstep;
+                GetComponent<AudioSource>().PlayOneShot(sonmarche);
+            }
+
+            if (Character.isGrounded || IsGrounded)
+            {
+                IsGrounded = true;
+
+            }
+
+            // Changes the height position of the player..
+            if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded || ischeated))
+            {
+                IsGrounded = false;
+                playerVelocity.y += -0.7f * Gravity;
+            }
+
+            playerVelocity.y += Gravity * Time.deltaTime;
+
+            Character.Move(playerVelocity * Time.deltaTime);
+
+            run = 1f;
+
+            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.fixedDeltaTime * rotateSpeed);
+            //Boussole.transform.Rotate(new Vector3(0, 0, Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed);
         }
-
-        if(cheatedtime != 0 && Time.time - cheatedtime > 3)
-        {
-            ChatPannel.SetActive(false);
-            cheatedtime = 0;
-        }
-
-        if (Cam.GetQueteAcheve() > 1)
-        {
-            Boussole.gameObject.SetActive(true);
-        }
-        else
-        {
-            Boussole.gameObject.SetActive(false);
-        }
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            run = 1.5f;
-        }
-
-        Coordinates = transform.position;
-
-        if (Character.velocity.y < 0 && Character.isGrounded) playerVelocity.y = 0f;
-
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        Character.Move(transform.right * move.x * Time.deltaTime * Speed * run);
-        Character.Move(transform.forward * move.z * Time.deltaTime * Speed * run);
-        ReduiceHungry(Time.deltaTime * run);
-
-        if (move != new Vector3(0,0,0) && Time.time > nextPlay && Character.isGrounded)
-        {
-            nextPlay = Time.time + delaybetweenstep;
-            GetComponent<AudioSource>().PlayOneShot(sonmarche);
-        }
-
-        if(Character.isGrounded || IsGrounded) 
-        {
-            IsGrounded = true;
-
-        }
-
-        // Changes the height position of the player..
-        if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded || ischeated))
-        {
-            IsGrounded = false;
-            playerVelocity.y += -0.7f * Gravity;
-        }
-
-        playerVelocity.y += Gravity * Time.deltaTime;
-
-        Character.Move(playerVelocity * Time.deltaTime);
-
-        run = 1f;
-
-        transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.fixedDeltaTime * rotateSpeed);
-        Boussole.transform.Rotate(new Vector3(0, 0, Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed);
+        
     }
 
     public void ReduiceHungry(float hungry)
@@ -187,7 +194,7 @@ public class Player : Personnages
             }
         }
 
-        BalancePanel.GetComponentInChildren<Text>().text = $"{BalanceText} $";
+        //BalancePanel.GetComponentInChildren<Text>().text = $"{BalanceText} $";
     }
 }
 

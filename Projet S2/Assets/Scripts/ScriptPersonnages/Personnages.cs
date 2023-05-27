@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public abstract class Personnages : MonoBehaviour
+public abstract class Personnages : MonoBehaviourPunCallbacks
 {
     [SerializeField] protected float Health;
     protected float MaxHealth;
