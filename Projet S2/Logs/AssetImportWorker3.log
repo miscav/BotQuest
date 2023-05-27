@@ -1,0 +1,1013 @@
+Using pre-set license
+Built from '2022.2/staging' branch; Version is '2022.2.5f1 (551d45108343) revision 5578053'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'fr' Physical Memory: 15720 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.2.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/staba/BotQuest/Projet S2
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+54357
+Successfully changed project path to: C:/Users/staba/BotQuest/Projet S2
+C:/Users/staba/BotQuest/Projet S2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [11608] Host "[IP] 192.168.1.36 [Port] 0 [Flags] 2 [Guid] 1770532870 [EditorId] 1770532870 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ETVF3KA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [11608] Host "[IP] 192.168.1.36 [Port] 0 [Flags] 2 [Guid] 1770532870 [EditorId] 1770532870 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ETVF3KA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 27.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.2.5f1 (551d45108343)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/staba/BotQuest/Projet S2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
+    Vendor:   NVIDIA
+    VRAM:     6009 MB
+    Driver:   31.0.15.2756
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006126 seconds.
+- Loaded All Assemblies, in  0.298 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.258 seconds
+Domain Reload Profiling:
+	ReloadAssembly (182ms)
+		BeginReloadAssembly (71ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		LoadAllAssembliesAndSetupDomain (0ms)
+			LoadAssemblies (69ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (109ms)
+				TypeCache.Initialize (108ms)
+					TypeCache.ScanAssembly (107ms)
+				ResolveRequiredComponents (0ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (202ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (8ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (136ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\staba\BotQuest\Projet S2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\staba\BotQuest\Projet S2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.094 seconds
+Refreshing native plugins compatible for Editor in 17.62 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.734 seconds
+Domain Reload Profiling:
+	ReloadAssembly (209ms)
+		BeginReloadAssembly (114ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		LoadAllAssembliesAndSetupDomain (880ms)
+			LoadAssemblies (346ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (576ms)
+				TypeCache.Initialize (333ms)
+					TypeCache.ScanAssembly (327ms)
+				ResolveRequiredComponents (7ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (572ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (5ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (344ms)
+				ProcessInitializeOnLoadMethodAttributes (129ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 13.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4598 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 79 unused Assets / (412.2 KB). Loaded Objects now: 5051.
+Memory consumption went from 0.72 GB to 0.72 GB.
+Total: 7.080700 ms (FindLiveObjects: 0.382200 ms CreateObjectMapping: 0.149300 ms MarkObjects: 6.225200 ms  DeleteObjects: 0.322800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 696049.432289 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Barrier_01.prefab
+  artifactKey: Guid(c149960d9485b394e8d52ae30578e3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Barrier_01.prefab using Guid(c149960d9485b394e8d52ae30578e3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '388c981a35f20b02ec3ae8d8858a74c1') in 0.141182 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Deckchair_01.prefab
+  artifactKey: Guid(a04f6e9f627e52c4ab26cb420ab6401f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Deckchair_01.prefab using Guid(a04f6e9f627e52c4ab26cb420ab6401f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e4fb44b9e9a4044c4aa035ea558056a') in 0.025215 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Billboard_Sign_02.prefab
+  artifactKey: Guid(017a6f5ce43f6d74ca746ed804873917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Billboard_Sign_02.prefab using Guid(017a6f5ce43f6d74ca746ed804873917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b37b325b7db0015e6a2253f21f8a75ab') in 0.017353 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LargeSign_BowlingPin_01.prefab
+  artifactKey: Guid(94147211148ab5a449bb861d39bd169f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LargeSign_BowlingPin_01.prefab using Guid(94147211148ab5a449bb861d39bd169f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d71a3d61f4b12b0c5af9dd6208dd5c0') in 0.022462 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Door_01.prefab
+  artifactKey: Guid(47455669544a7614fb1944943e4fdcbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Door_01.prefab using Guid(47455669544a7614fb1944943e4fdcbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09185d9682fe2ad28a00eb8cef4e482d') in 0.024359 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LargeSign_Milkshake_01.prefab
+  artifactKey: Guid(6f80e919ce3f15944905cac373e3b447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LargeSign_Milkshake_01.prefab using Guid(6f80e919ce3f15944905cac373e3b447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61b4af8dc28da2d9c9e92b6e234f4743') in 0.021577 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Light_Attachment_01.prefab
+  artifactKey: Guid(855a9894cbcf2e246902c190dc1e5a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Light_Attachment_01.prefab using Guid(855a9894cbcf2e246902c190dc1e5a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284f8133bad9b151be859d99285f0c70') in 0.022164 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LargeSign_Icecream_01.prefab
+  artifactKey: Guid(1c0370843c27f3241b125cb9187073d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LargeSign_Icecream_01.prefab using Guid(1c0370843c27f3241b125cb9187073d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be2481b8176815c8c1c8c8c831ee99fe') in 0.019980 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LightPole_Lights_02.prefab
+  artifactKey: Guid(6702d719a0fd01142ab7529f2a36d350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LightPole_Lights_02.prefab using Guid(6702d719a0fd01142ab7529f2a36d350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bcf47113e056531b1a85101c2c4463f') in 0.022725 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Newspaper_01.prefab
+  artifactKey: Guid(d0a449419dc6e404d94d5081fa710767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Newspaper_01.prefab using Guid(d0a449419dc6e404d94d5081fa710767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55fcba87eed219b321a02756417871a0') in 0.022549 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Paper_02.prefab
+  artifactKey: Guid(fc189f6b0af3f6843b28de731f5b15e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Paper_02.prefab using Guid(fc189f6b0af3f6843b28de731f5b15e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce5aae17759f9eb0eac0ca54ea7a60da') in 0.018603 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Paper_05.prefab
+  artifactKey: Guid(bbe271edc5b4fd04589440e05e4a0ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Paper_05.prefab using Guid(bbe271edc5b4fd04589440e05e4a0ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a09eee98234a68b7f3e9849353ec4ae6') in 0.020303 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_ParkingMeter_02.prefab
+  artifactKey: Guid(94a7e311b5cf22f4898fa342bfef126e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_ParkingMeter_02.prefab using Guid(94a7e311b5cf22f4898fa342bfef126e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cee44969427c5f977382930b4e4a0ae0') in 0.024964 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Pipe_Part_Corner_01.prefab
+  artifactKey: Guid(4992e3e5ba8f19c4bbd4187ea00e63fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Pipe_Part_Corner_01.prefab using Guid(4992e3e5ba8f19c4bbd4187ea00e63fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '142518997bd265ad44b744c6527c7d07') in 0.019101 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Pipe_Part_T_01.prefab
+  artifactKey: Guid(75ed760c5f58b1b45b9173b77c8c7785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Pipe_Part_T_01.prefab using Guid(75ed760c5f58b1b45b9173b77c8c7785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d28038645a6a23ba23d561d4ee1819a') in 0.032285 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Planter_01.prefab
+  artifactKey: Guid(79d39b0d041480b479fb5cc05284aa87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Planter_01.prefab using Guid(79d39b0d041480b479fb5cc05284aa87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c949f1a67153a99006dfd8e2e433629') in 0.026261 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Paper_04.prefab
+  artifactKey: Guid(1bc6dc700e247464a9f5a53bd3213bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Paper_04.prefab using Guid(1bc6dc700e247464a9f5a53bd3213bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9314537fdd882a458549483c25eb44b') in 0.024354 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Pipe_Preset_03.prefab
+  artifactKey: Guid(95e6ac9cb6c498d4fb94b42d4800fd9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Pipe_Preset_03.prefab using Guid(95e6ac9cb6c498d4fb94b42d4800fd9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958e4274ebabe5ad6890df9d2ffc242a') in 0.024417 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Cone_01.prefab
+  artifactKey: Guid(33b36afb51822b442b3a3f8accf3c199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Cone_01.prefab using Guid(33b36afb51822b442b3a3f8accf3c199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d87f6f4623b59fbdfcd099e480a136d') in 0.026223 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Billboard_Sign_04.prefab
+  artifactKey: Guid(430345e20ddf842489bc80fba96a0edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Billboard_Sign_04.prefab using Guid(430345e20ddf842489bc80fba96a0edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3908e3af28fa93e92816bc0f0d0dcdff') in 0.020119 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Billboard_Sign_01.prefab
+  artifactKey: Guid(2af99c846574e2e4e96b75f3c3c9d784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Billboard_Sign_01.prefab using Guid(2af99c846574e2e4e96b75f3c3c9d784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0fbcb8594abe665ae6201c45baefe4c') in 0.022527 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LargeSign_Bottle_01.prefab
+  artifactKey: Guid(4f96f6be8b901eb4c80c229856393703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LargeSign_Bottle_01.prefab using Guid(4f96f6be8b901eb4c80c229856393703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '997692fd004c6040cc45b7c0f3ab1b78') in 0.023420 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LightPole_Box_01.prefab
+  artifactKey: Guid(bf8c887ce2a3f8f41be86bb54fa20b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_LightPole_Box_01.prefab using Guid(bf8c887ce2a3f8f41be86bb54fa20b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bea0362c1f5ba2ccbd297851d060527') in 0.024064 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Manhole_02.prefab
+  artifactKey: Guid(12633cd99f9582a49a33e00103daf054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Manhole_02.prefab using Guid(12633cd99f9582a49a33e00103daf054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde482e646bf8315c4942751d384ba97') in 0.022917 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 1.946432 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Characters/Character_BusinessWoman_01.prefab
+  artifactKey: Guid(6412c6bdd410913469520a05a1632885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Characters/Character_BusinessWoman_01.prefab using Guid(6412c6bdd410913469520a05a1632885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9c46e8446aa222ee9402d00ae707ca8') in 0.036128 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Characters/Character_Male_Jacket_01.prefab
+  artifactKey: Guid(5f6cbb0f4dd572e47ab1ee6c2a3a36d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonCity/Prefabs/Characters/Character_Male_Jacket_01.prefab using Guid(5f6cbb0f4dd572e47ab1ee6c2a3a36d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff34ffe9313ab3f90dbd1dff1b540bde') in 0.039607 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 10.664027 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonSamples/PolygonDungeons/Prefabs/SM_Env_Wall_DoorFrame_Double_01.prefab
+  artifactKey: Guid(c471d926dd14df447b0b20fa3cb102a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonSamples/PolygonDungeons/Prefabs/SM_Env_Wall_DoorFrame_Double_01.prefab using Guid(c471d926dd14df447b0b20fa3cb102a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '655a617a587636868119f13b20158592') in 0.021034 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 4.958528 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonSamples/PolygonSciFiCity/Prefabs/SM_Bld_Large_05.prefab
+  artifactKey: Guid(d1ab5cece426b234693e4cd5235226f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonSamples/PolygonSciFiCity/Prefabs/SM_Bld_Large_05.prefab using Guid(d1ab5cece426b234693e4cd5235226f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba68f4c43e61ad57f844c653b29428a5') in 0.015218 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.003401 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonSamples/PolygonSciFiCity/Prefabs/SM_Wep_Pistol_01.prefab
+  artifactKey: Guid(3d53158324d0d90449744584cef6b151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonSamples/PolygonSciFiCity/Prefabs/SM_Wep_Pistol_01.prefab using Guid(3d53158324d0d90449744584cef6b151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d474a75a995ca3c753c158476fdbf43') in 0.019186 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 7.332319 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Bush_03.prefab
+  artifactKey: Guid(09191fb08393ccf4291d1be49a262339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Bush_03.prefab using Guid(09191fb08393ccf4291d1be49a262339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8550812ec33705019df9b32d2fb62647') in 0.011613 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.148057 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_DirtMound_01_Snow.prefab
+  artifactKey: Guid(e4ecdd09cefb01a42a7974379aff61aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_DirtMound_01_Snow.prefab using Guid(e4ecdd09cefb01a42a7974379aff61aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a861f805d8aa1ae6be11d5e65c171db8') in 0.022580 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.020538 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_FloorTile_04.prefab
+  artifactKey: Guid(7527293ca015a324d9a5a3fec600da4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_FloorTile_04.prefab using Guid(7527293ca015a324d9a5a3fec600da4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7071134d9c572887f9965487470f060') in 0.015886 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_FloorTile_06.prefab
+  artifactKey: Guid(115e19f45cfeb3648b9618a720e2f288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_FloorTile_06.prefab using Guid(115e19f45cfeb3648b9618a720e2f288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ddc639a370ccffe1bc7bba306474e79') in 0.013514 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Flower_02.prefab
+  artifactKey: Guid(888a19a6a2e12e240b806f77f4d0ed07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Flower_02.prefab using Guid(888a19a6a2e12e240b806f77f4d0ed07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56302551163005465fa567700575538a') in 0.012431 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.004392 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Flower_05.prefab
+  artifactKey: Guid(bd797f8b461dda044840c3a0bd197fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Flower_05.prefab using Guid(bd797f8b461dda044840c3a0bd197fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ccb647f86c1df173ecab3f60cefd47b') in 0.021895 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.053442 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Grass_02.prefab
+  artifactKey: Guid(29fa604a71af93f4ea5a436c6de8cb99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Grass_02.prefab using Guid(29fa604a71af93f4ea5a436c6de8cb99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f23d3b80a76915c1c899292ff1552b59') in 0.040991 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.019069 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_GroundMounds_04.prefab
+  artifactKey: Guid(ed9fd7e6c74a92f42b49e06cb75d2088) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_GroundMounds_04.prefab using Guid(ed9fd7e6c74a92f42b49e06cb75d2088) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9af825353b5b1d8ecc6411edd79e63a0') in 0.021214 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.006526 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_GroundMounds_07.prefab
+  artifactKey: Guid(94d3121b705034742a9546cfcf2b05d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_GroundMounds_07.prefab using Guid(94d3121b705034742a9546cfcf2b05d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c94410ed5ba6e2f14a4254ccd8edecb') in 0.011867 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.179316 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Hill_04.prefab
+  artifactKey: Guid(77009d3729b694c498bdc68c9d75018d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Hill_04.prefab using Guid(77009d3729b694c498bdc68c9d75018d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4f744418b476d984ecd996d1601b3a2') in 0.044862 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Ice_01.prefab
+  artifactKey: Guid(1951d271315386246b9b2dac3cdb87fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Ice_01.prefab using Guid(1951d271315386246b9b2dac3cdb87fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acf6c61b279ad48d76c2bdcd981c2894') in 0.014197 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Ice_03.prefab
+  artifactKey: Guid(4562fbe7885fe2b4ba7e925d7f9e0ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Ice_03.prefab using Guid(4562fbe7885fe2b4ba7e925d7f9e0ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58d202e33059c56e342135a95c5706a2') in 0.016702 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Mushroom_01.prefab
+  artifactKey: Guid(2dc72da8b5d1d5e42b5be6a6f0c2c4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Mushroom_01.prefab using Guid(2dc72da8b5d1d5e42b5be6a6f0c2c4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af2b51ea9a53cb734f7c516d670e69fe') in 0.013079 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_HillSnow_04.prefab
+  artifactKey: Guid(d62be77ab4b73b54f8cd6e96a767f023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_HillSnow_04.prefab using Guid(d62be77ab4b73b54f8cd6e96a767f023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b7c7adef84d5e5d1409fee885c9fff5') in 0.045494 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Pebble_02.prefab
+  artifactKey: Guid(e4019aa3c0b9c6b4db5d134d37ee8754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Pebble_02.prefab using Guid(e4019aa3c0b9c6b4db5d134d37ee8754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c218a7a65693eb0f328b5a7b57970b70') in 0.036896 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Pebble_07.prefab
+  artifactKey: Guid(4ba3306fc02f77e4bb357f2f3030f5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Pebble_07.prefab using Guid(4ba3306fc02f77e4bb357f2f3030f5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e75ffaf053450258d8bd8f1e9b6bca20') in 0.041075 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Plant_02.prefab
+  artifactKey: Guid(cc7144ff9653031498f244b1df8c8fa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Plant_02.prefab using Guid(cc7144ff9653031498f244b1df8c8fa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '834419792424a54345fdc7c2d975e76c') in 0.037563 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.006735 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Reeds_01.prefab
+  artifactKey: Guid(e56f1fbea0219724398a7942c07f3618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Reeds_01.prefab using Guid(e56f1fbea0219724398a7942c07f3618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ab2421a0bb908c3a4dce6cbcf5fdd07') in 0.011848 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.074026 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Road_Cross_01.prefab
+  artifactKey: Guid(659ffda2fd4a2ee4cb3bc9ccc0f4c4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Road_Cross_01.prefab using Guid(659ffda2fd4a2ee4cb3bc9ccc0f4c4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6443e738eb647f510ee7f3b047aa7386') in 0.052500 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Road_Straight_01.prefab
+  artifactKey: Guid(c87a99b4c24b9ce48bac40727eb1ecb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Road_Straight_01.prefab using Guid(c87a99b4c24b9ce48bac40727eb1ecb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '641422bbf12c571cd1e8f16ed82afa58') in 0.037788 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.003680 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Road_Straight_02.prefab
+  artifactKey: Guid(6c700b3798672714e935e2351a541be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Road_Straight_02.prefab using Guid(6c700b3798672714e935e2351a541be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '145bf64da08e75693ee94efb7e5c6d33') in 0.015915 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.907882 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Road_T_01_Snow.prefab
+  artifactKey: Guid(5ab0a89b999b35f409030a8e88830d12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Road_T_01_Snow.prefab using Guid(5ab0a89b999b35f409030a8e88830d12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96fcf63c410bcb42b9a99a57d2cccccd') in 0.017835 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_03.prefab
+  artifactKey: Guid(954d5b0641aca3b4da80d82212a18e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_03.prefab using Guid(954d5b0641aca3b4da80d82212a18e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '134117de382dfd1f2e51dd00dcc95339') in 0.018881 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_04_Snow.prefab
+  artifactKey: Guid(78945eba40111464bb27c0682e72aad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_04_Snow.prefab using Guid(78945eba40111464bb27c0682e72aad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83f9e6e68bce5361e02b78a2121c264a') in 0.014930 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000580 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_07.prefab
+  artifactKey: Guid(4a0161dd17a0d6b42b4f8046836bcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_07.prefab using Guid(4a0161dd17a0d6b42b4f8046836bcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '227fcfe1f473fe73b527d07af2b90a2d') in 0.015634 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.001568 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_010.prefab
+  artifactKey: Guid(cd24e2db351b23d4394bf6b5203c87a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_010.prefab using Guid(cd24e2db351b23d4394bf6b5203c87a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '749030f0a2bdca57f9b455771f4e2e78') in 0.014359 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.029412 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_014.prefab
+  artifactKey: Guid(fe78b30f7a980d748a46c587a31099fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_014.prefab using Guid(fe78b30f7a980d748a46c587a31099fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30a6df9c5e2571fe01fd1d2a72c1ebc5') in 0.016112 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.001056 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_SnowPile_01.prefab
+  artifactKey: Guid(8385b5d2216332940bc665cd517a4e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_SnowPile_01.prefab using Guid(8385b5d2216332940bc665cd517a4e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '663141f02b72b0a823cdc48df77ab4d8') in 0.014624 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.004175 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Stalagmite_01.prefab
+  artifactKey: Guid(e630370e466d57648b32da531956bf10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Stalagmite_01.prefab using Guid(e630370e466d57648b32da531956bf10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '542194e87fea2924175809a72745827c') in 0.014625 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.002153 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Stream_Corner_01.prefab
+  artifactKey: Guid(aa22ca574bab6a84bb8b5a537d7fd427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Stream_Corner_01.prefab using Guid(aa22ca574bab6a84bb8b5a537d7fd427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72e4bb2b9fe3b4a21ee200b9c2954ebc') in 0.019427 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Stream_Straight_01_Snow.prefab
+  artifactKey: Guid(dc77e9af60a304c47a55055c8d51f890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Stream_Straight_01_Snow.prefab using Guid(dc77e9af60a304c47a55055c8d51f890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02dd0890626bfa6f5e81d7babac01d13') in 0.016091 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_01.prefab
+  artifactKey: Guid(1fedb5571d445274782330b0eea48e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_01.prefab using Guid(1fedb5571d445274782330b0eea48e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfb5d41fae93e03c2f2ee5b264471128') in 0.015881 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000562 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_02_Snow.prefab
+  artifactKey: Guid(396b2aadc2f369d4e83c136cd02dd1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_02_Snow.prefab using Guid(396b2aadc2f369d4e83c136cd02dd1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06a63f6eb1df137fc6c9c0de41b6afa3') in 0.016177 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.001314 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_04.prefab
+  artifactKey: Guid(247e09e89c199dd46b07af0a0a46b8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_04.prefab using Guid(247e09e89c199dd46b07af0a0a46b8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '087c6d7b960ab7dec7392b7c7ea75470') in 0.014632 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.001379 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_06.prefab
+  artifactKey: Guid(6b1e970065443dd46b6854a0caf642c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_06.prefab using Guid(6b1e970065443dd46b6854a0caf642c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d0d12ba80fa4fd5f6db723b9e710599') in 0.019116 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_07_Snow.prefab
+  artifactKey: Guid(5825e892e95759e4c8731f2f425e6565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_07_Snow.prefab using Guid(5825e892e95759e4c8731f2f425e6565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23b4655599e60eb669df0eaf40061e5e') in 0.015637 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.028697 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_010.prefab
+  artifactKey: Guid(d556d30cab334dd449000218c87322ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_010.prefab using Guid(d556d30cab334dd449000218c87322ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48fcc33d75d0e5a5a30c26919c7e2f18') in 0.016572 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000687 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_011_Snow.prefab
+  artifactKey: Guid(9f95495ddaf2d2e47bf5b1c2ee2bf4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_011_Snow.prefab using Guid(9f95495ddaf2d2e47bf5b1c2ee2bf4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '913f4a58f72c7a08f4d2af705732d0de') in 0.014022 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000460 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_013.prefab
+  artifactKey: Guid(97bb6fd1f3a811c41af585fe99d31bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_013.prefab using Guid(97bb6fd1f3a811c41af585fe99d31bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '131e7e687500764e33a212c137141489') in 0.016863 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000421 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_014_Snow.prefab
+  artifactKey: Guid(01ada3171b6f8424689846914f004143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_014_Snow.prefab using Guid(01ada3171b6f8424689846914f004143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f5379ad80d15269f76d5c6b7bca46b2') in 0.016968 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_016.prefab
+  artifactKey: Guid(8b9ee8d20c8c4c84f95499978c6e7d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_016.prefab using Guid(8b9ee8d20c8c4c84f95499978c6e7d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b233913b510ea6496d403cd24b1e213d') in 0.018742 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.505205 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreeBirch_01_Snow.prefab
+  artifactKey: Guid(9ff00da5505916f4285c4891a1195bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreeBirch_01_Snow.prefab using Guid(9ff00da5505916f4285c4891a1195bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '566beee27d8f2fc430c3538999fc56cb') in 0.018417 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreeDead_01.prefab
+  artifactKey: Guid(105f2418cc866b6439b211cb0181b50e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreeDead_01.prefab using Guid(105f2418cc866b6439b211cb0181b50e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bd73c38e20e523eb50e9de3365fb996') in 0.016050 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 37
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreeLog_01.prefab
+  artifactKey: Guid(e0bcb36554be1124b8a89d63037350be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreeLog_01.prefab using Guid(e0bcb36554be1124b8a89d63037350be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbc756c470d6f068c6b383d985c3d093') in 0.015982 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreePine_02.prefab
+  artifactKey: Guid(7b2a3b8555d398f47ba16348aaa3b3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreePine_02.prefab using Guid(7b2a3b8555d398f47ba16348aaa3b3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9953ee9f79ace38f0f3a5aa43564a32c') in 0.015292 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreePine_03_Snow.prefab
+  artifactKey: Guid(335f9f042781e494ab3ad14d24c8b719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_TreePine_03_Snow.prefab using Guid(335f9f042781e494ab3ad14d24c8b719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc00c44256678bae509d7af20239f347') in 0.023346 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.008752 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Water.prefab
+  artifactKey: Guid(fb4e0b01a8eccf24c9e5ca4c30a9b2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Water.prefab using Guid(fb4e0b01a8eccf24c9e5ca4c30a9b2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dc9b790d41241792c0e65b79ed7779b') in 0.018724 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 9.069142 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Fence_02.prefab
+  artifactKey: Guid(d66c89601ce96d4419ce36a4dce3c401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Fence_02.prefab using Guid(d66c89601ce96d4419ce36a4dce3c401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '994e27b880a23ab3936ded937658230f') in 0.015453 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.001759 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Hut_01.prefab
+  artifactKey: Guid(d1e13909567fcd341bfe40fd2f12368e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Hut_01.prefab using Guid(d1e13909567fcd341bfe40fd2f12368e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '591798a9cae1e9688138556e7954fe69') in 0.015075 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Market_Snow_01.prefab
+  artifactKey: Guid(c9ec9c56dbef6d646a39fbf57f8497b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Market_Snow_01.prefab using Guid(c9ec9c56dbef6d646a39fbf57f8497b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb30fa90be56f96cd01be586d62304a7') in 0.013013 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.004183 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Stall_03.prefab
+  artifactKey: Guid(9f5eeb56cc1751143955526d56c06622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Stall_03.prefab using Guid(9f5eeb56cc1751143955526d56c06622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '101df023df4e977e6d23057e00a11971') in 0.014631 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Stall_Cover_02.prefab
+  artifactKey: Guid(c3dea81905538c54abf92c51fc0cee1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Stall_Cover_02.prefab using Guid(c3dea81905538c54abf92c51fc0cee1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9a4c1de2fce722dc7414ad38d067904') in 0.013532 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Stall_Cover_05.prefab
+  artifactKey: Guid(b0fb378b5fbcb82468d2998f3300078c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Stall_Cover_05.prefab using Guid(b0fb378b5fbcb82468d2998f3300078c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '305d091ecfb92e01bc3bced9d869f2d0') in 0.017908 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Village_03.prefab
+  artifactKey: Guid(5f8835a0f81a6c1489b93bed7c675488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Village_03.prefab using Guid(5f8835a0f81a6c1489b93bed7c675488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebe93226aa5a3242cf67b3f4e4a7a59d') in 0.012734 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Village_06.prefab
+  artifactKey: Guid(6ce75ef5b343b6a468f0807c8ccd7379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Village_06.prefab using Guid(6ce75ef5b343b6a468f0807c8ccd7379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00dbb0001fe087949b45f7264221afa1') in 0.016289 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Village_SnowSheet_01.prefab
+  artifactKey: Guid(83b86feebbdcc1d4f97873b59352c5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Village_SnowSheet_01.prefab using Guid(83b86feebbdcc1d4f97873b59352c5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff55a27a1abd8cf8d27c2d88127d2b7') in 0.013188 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000501 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Wall_01.prefab
+  artifactKey: Guid(76d0990ce6d878544bdb1bc9f388dbce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Wall_01.prefab using Guid(76d0990ce6d878544bdb1bc9f388dbce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b17a73b36a76db6eeab9c5b1ff0beeb') in 0.016534 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 4.831418 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Basket_01.prefab
+  artifactKey: Guid(970cd4f601e083847b3c1dede5521995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Basket_01.prefab using Guid(970cd4f601e083847b3c1dede5521995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c40cf1392c7fe9a97a09e8bbe7f4298') in 0.013364 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Basket_04.prefab
+  artifactKey: Guid(5489de3ba8de3204983754afa325efc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Basket_04.prefab using Guid(5489de3ba8de3204983754afa325efc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc64c4d9bb765f79fabcdc5ea934fc31') in 0.016574 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Cart_02.prefab
+  artifactKey: Guid(f3fc066d1e9548f4d80eea3f373183de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Cart_02.prefab using Guid(f3fc066d1e9548f4d80eea3f373183de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c67d60da9637f91ecc904ce8864b729b') in 0.012818 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Cart_Wheel_01.prefab
+  artifactKey: Guid(02eae6cf7b6c5d040bae88762a05569e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Cart_Wheel_01.prefab using Guid(02eae6cf7b6c5d040bae88762a05569e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '793bd4c27bfa40dc5a9a56d22b9ae60d') in 0.015283 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Cart_03.prefab
+  artifactKey: Guid(508206b8d74d09c4d96cee495fa4fafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Cart_03.prefab using Guid(508206b8d74d09c4d96cee495fa4fafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd614e1541bfdd3fcf521d2fe496492ac') in 0.014439 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Loghalf_01.prefab
+  artifactKey: Guid(adfab66261f199c4f848aa0427e46248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Loghalf_01.prefab using Guid(adfab66261f199c4f848aa0427e46248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '649196058b1360a5b1e223858bd4d781') in 0.014505 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Logpile_01.prefab
+  artifactKey: Guid(1a59f0a7e65a5b04aa48968eb0720fbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Logpile_01.prefab using Guid(1a59f0a7e65a5b04aa48968eb0720fbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa7859136d9a47db94611103c801e4ef') in 0.014315 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Pot_01.prefab
+  artifactKey: Guid(9a1b88269765c9845b106c8f675af29a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Pot_01.prefab using Guid(9a1b88269765c9845b106c8f675af29a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795e4c36a9f63ec524f6d87acea91697') in 0.014567 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Pumpkin_01.prefab
+  artifactKey: Guid(626f1b816ba1ee64a9f7cea6ceb529cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Pumpkin_01.prefab using Guid(626f1b816ba1ee64a9f7cea6ceb529cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a50c99529989e987e3e044d18e8b50') in 0.013622 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_RoadSign_01.prefab
+  artifactKey: Guid(cf6871bb3104ec44c9b52e64356323d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_RoadSign_01.prefab using Guid(cf6871bb3104ec44c9b52e64356323d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb3e99f4c55607b7c925ca8624cf8f5') in 0.015996 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Sack_02.prefab
+  artifactKey: Guid(092ae17ef10fe5a41a76f5f4549496de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Sack_02.prefab using Guid(092ae17ef10fe5a41a76f5f4549496de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffef60b460067f9354b2833dbe74256f') in 0.012283 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Scroll_02.prefab
+  artifactKey: Guid(72aa2efe8b551544cb5146ddebd8cfde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Scroll_02.prefab using Guid(72aa2efe8b551544cb5146ddebd8cfde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b47f2adc29638561b05922710ddc85b3') in 0.015129 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Washingline_01.prefab
+  artifactKey: Guid(0ba1f6eb441fdfe46b24ecdc02b9b95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Washingline_01.prefab using Guid(0ba1f6eb441fdfe46b24ecdc02b9b95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b57a989235bba6a182deb1250a5263aa') in 0.012941 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Chest_01.prefab
+  artifactKey: Guid(1c64fbe146825d4439e21d3a3c64b4fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Chest_01.prefab using Guid(1c64fbe146825d4439e21d3a3c64b4fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9c44f12de0847dce83891027340f40d') in 0.025300 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 2.493032 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Fruit_02.prefab
+  artifactKey: Guid(13bc7e8dc4a1fce4fb5bd7665ebc3013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Fruit_02.prefab using Guid(13bc7e8dc4a1fce4fb5bd7665ebc3013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b124bbaa4b60c0495e263851febc165') in 0.011791 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.002325 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Lantern_01.prefab
+  artifactKey: Guid(f4c62b1a746281e44800c9250dd3643c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Lantern_01.prefab using Guid(f4c62b1a746281e44800c9250dd3643c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d47dcfbd6703e34a190200607e5dd14') in 0.015467 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Potion_02.prefab
+  artifactKey: Guid(aaf66617a9239884aa44a5f00e14bfc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Potion_02.prefab using Guid(aaf66617a9239884aa44a5f00e14bfc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d369d950076e4be8ddd3590f0ae23ab') in 0.013052 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.001764 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Potion_05.prefab
+  artifactKey: Guid(c7491b2a33df8a944bdcf31ff40103c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Potion_05.prefab using Guid(c7491b2a33df8a944bdcf31ff40103c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fdce3d8eb3c236ed1715c4da639be9c') in 0.013679 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.002069 seconds.
+  path: Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Waterskin_01.prefab
+  artifactKey: Guid(bddadfa1910975c49913f0e7de5f535e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets de la map/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Waterskin_01.prefab using Guid(bddadfa1910975c49913f0e7de5f535e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54cd20b35685d3a564b3570af4ff9159') in 0.013205 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: L’opération d’entrée/sortie a été abandonnée en raison de l’arrêt d’un thread ou à la demande d’une application.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
