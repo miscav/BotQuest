@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,8 +37,8 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            inventoryPanel.SetActive(!inventoryPanel.activeSelf);
             Refresh();
+            inventoryPanel.SetActive(!inventoryPanel.activeSelf);
         }
     }
 
@@ -99,17 +100,20 @@ public class Inventory : MonoBehaviour
             Slot slot = SlotContent.transform.GetChild(i).GetComponent<Slot>();
             slot.Item = Content[i];
             slot.Visual = Content[i].Visual;
+            slot.transform.GetChild(0).GetComponent<Image>().sprite = slot.Visual;
         }
         for (int i = Content.Count; i < 16; i++)
         {
             Slot slot = SlotContent.transform.GetChild(i).GetComponent<Slot>();
             slot.Item = null;
             slot.Visual = Transparent;
+            slot.transform.GetChild(0).GetComponent<Image>().sprite = slot.Visual;
         }
     }
 
     public void OpenActionItemPanel(ItemsData item)
     {
+        Refresh();
         // use drop equip repair destroy
         switch (item.itemType)
         {

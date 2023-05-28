@@ -3,14 +3,13 @@ using UnityEngine.UI;
 
 public class Cam : MonoBehaviour
 {
-    private Player player;
-    private PlayerStats playerStats;
+    public static Player player;
+    public static PlayerStats playerStats;
     private Ray ray;
     [SerializeField] GameObject Interaction;
     [SerializeField] GameObject Text;
     [SerializeField] private GameObject ShopPanel;
     [SerializeField] public GameObject PickUpPanel;
-    [SerializeField] private static int QuetesAcheve;
     [SerializeField] private QueteManagement QueteVise;
     [SerializeField] private GameObject Accepter;
     [SerializeField] private GameObject Refuser;
@@ -24,12 +23,12 @@ public class Cam : MonoBehaviour
     [SerializeField] private AudioClip reparation;
     private float wintime;
     private bool Repaired;
+    private RaycastHit hit;
 
 
     void Start()
     {
         ray = new Ray(transform.position, transform.forward * 10);
-        QuetesAcheve = 0;
         Text.SetActive(false);
         Terminer.SetActive(false);
         Abandonner.SetActive(false);
@@ -39,10 +38,10 @@ public class Cam : MonoBehaviour
         Repaired = false;
         WinScreen.SetActive(false);
         wintime = 0;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<Player>();
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<PlayerStats>();
-        //player = gameObject.GetComponentInParent<Player>();
-        //playerStats = gameObject.GetComponentInParent<PlayerStats>();
+        // player = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<Player>();
+        // playerStats = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<PlayerStats>();
+        // player = gameObject.GetComponentInParent<Player>();
+        // playerStats = gameObject.GetComponentInParent<PlayerStats>();
         ChatPanel.SetActive(false);
         chattime= 0;
     }
@@ -50,11 +49,6 @@ public class Cam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            QuetesAcheve+= 1;
-        }
-
         if(chattime!=0 && Time.time - chattime > 3) 
         {
             ChatPanel.SetActive(false);
@@ -68,7 +62,6 @@ public class Cam : MonoBehaviour
             player.ischeated = true;
         }
 
-        RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3) && !Repaired)
         {
             if (hit.collider.gameObject.CompareTag("Quete"))
@@ -169,33 +162,13 @@ public class Cam : MonoBehaviour
         }
     }
 
-    public static int GetQueteAcheve()
-    {
-        return QuetesAcheve;
-    }
-
-    private void Accept()
+    public void Accept()
     {
         if (QueteManagement.QuetesActuelle == null)
         {
             if (QueteVise.quete.Peek() is Principale)
             {
-                if (((Principale)QueteVise.quete.Peek()).Requis == 0)
-                {
-                    QuetesAcheve++;
-                    QueteVise.Reussi(null);
-                }
-                else if (((Principale)QueteVise.quete.Peek()).Requis <= QuetesAcheve)
-                {
-                    QueteManagement.QuetesActuelle = QueteVise.quete.Peek();
-                }
-                else
-                {
-                    ChatPanel.GetComponent<Text>().text = "Vous devez effectuez les quetes principales précédantes avant celle ci !";
-                    ChatPanel.SetActive(true);
-                    chattime = Time.time;
-                    Debug.Log("Vous devez effectuez les quetes principales précédantes avant celle ci !");
-                }
+                QueteManagement.QuetesActuelle = QueteVise.quete.Peek();
             }
 
             Close();
@@ -208,24 +181,24 @@ public class Cam : MonoBehaviour
         }
     }
 
-    private void Close()
+    public void Close()
     {
         Text.SetActive(false);
     }
 
-    private void CloseShop()
+    public void CloseShop()
     {
         ShopPanel.SetActive(false);
     }
 
-    private void Kill()
+    public void Kill()
     {
         Text.SetActive(false);
         player.ReceiveDamages(player.GetHealth());
         Close();
     }
 
-    private void Abandon()
+    public void Abandon()
     {
         ChatPanel.GetComponent<Text>().text = "Vous avez bien abandonné la quête en cours !";
         ChatPanel.SetActive(true);
@@ -234,14 +207,14 @@ public class Cam : MonoBehaviour
         Close();
     }
 
-    private void Termine()
+    public void Termine()
     {
-        if(Inventory.instance.Search(QueteManagement.QuetesActuelle.ItemToBring) && QueteManagement.QuetesActuelle.ActionRequise)
+        if(QueteManagement.QuetesActuelle.ItemToBring == null || (Inventory.instance.Search(QueteManagement.QuetesActuelle.ItemToBring) && QueteManagement.QuetesActuelle.ActionRequise))
         {
+            Initialisation.nb_quete += 1;
             ChatPanel.GetComponent<Text>().text = "Bien joué, voilà votre récompense !";
             ChatPanel.SetActive(true);
             chattime = Time.time;
-            QuetesAcheve++;
             QueteVise.Reussi(QueteManagement.QuetesActuelle.ItemToBring);
         }
         else
@@ -254,12 +227,12 @@ public class Cam : MonoBehaviour
         Close();
     }
 
-    private void BruitDuBouton()
+    public void BruitDuBouton()
     {
         GetComponent<AudioSource>().PlayOneShot(sonClic);
     }
 
-    private void Repair()
+    public void Repair()
     {
         var time = Time.time;
         GetComponent<AudioSource>().PlayOneShot(reparation);

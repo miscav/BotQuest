@@ -8,10 +8,10 @@ public class TriggerMission : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            if(Cam.GetQueteAcheve() == 2 && QueteManagement.QuetesActuelle != null && QueteManagement.QuetesActuelle is Principale)
+            if(Initialisation.nb_quete == 2 && QueteManagement.QuetesActuelle != null && QueteManagement.QuetesActuelle is Principale)
             {
                 QueteManagement.QuetesActuelle.ActionRequise = true;
-            } 
+            }
         }
     }
 }

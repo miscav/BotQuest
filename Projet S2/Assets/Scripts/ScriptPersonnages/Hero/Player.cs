@@ -47,6 +47,7 @@ public class Player : Personnages
         delaybetweenstep = 0.65f;
         time1 = 0; time2 = 0; time3 = 0;
         player = this;
+        Cam.player = this;
     }
 
     void Update()
@@ -94,7 +95,7 @@ public class Player : Personnages
                 cheatedtime = 0;
             }
 
-            if (Cam.GetQueteAcheve() > 1)
+            if (Initialisation.nb_quete > 1)
             {
                 Boussole.gameObject.SetActive(true);
             }
@@ -142,8 +143,11 @@ public class Player : Personnages
 
             run = 1f;
 
-            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.fixedDeltaTime * rotateSpeed);
-            Boussole.transform.Rotate(new Vector3(0, 0, Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed);
+            //if(GameObject.Find("Canvas/ActionItemPanel").activeSelf && !GameObject.Find("Canvas/ShopPanel").activeSelf && !GameObject.Find("Canvas/InventoryPanel").activeSelf && !GameObject.Find("Canvas/quete").activeSelf)
+            //{
+                transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.fixedDeltaTime * rotateSpeed);
+                Boussole.transform.Rotate(new Vector3(0, 0, Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed);
+            //}
         }
         
     }

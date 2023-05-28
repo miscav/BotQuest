@@ -13,6 +13,10 @@ TagManager:
   - Port
   - Shop
   - Drink
+  - InventoryPanel
+  - ActionItemPanel
+  - ShopPanel
+  - QuetePanel
   layers:
   - Default
   - TransparentFX

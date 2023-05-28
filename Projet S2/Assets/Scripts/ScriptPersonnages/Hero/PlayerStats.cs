@@ -67,6 +67,8 @@ public class PlayerStats : MonoBehaviour
         player = gameObject.GetComponent<Player>();
         drinktime = 0;
         ChatPannel.SetActive(false);
+
+        Cam.playerStats = this;
     }
 
     private void Update()

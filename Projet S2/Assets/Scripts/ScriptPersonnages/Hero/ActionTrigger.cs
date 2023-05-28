@@ -15,6 +15,7 @@ public class ActionTrigger : MonoBehaviour
         PickUpPanel = GameObject.Find("CameraPlayer").GetComponent<Cam>().PickUpPanel;
         PickUpPanel.SetActive(false);
         Item = null;
+        inventory = Inventory.instance;
     }
 
     private void Update()
