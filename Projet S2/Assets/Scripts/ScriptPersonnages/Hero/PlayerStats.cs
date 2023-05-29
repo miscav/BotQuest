@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayerStats : MonoBehaviour
 {
     private Player player;
@@ -18,7 +19,7 @@ public class PlayerStats : MonoBehaviour
     [Header("HP")]
     [SerializeField]
     private float maxHealth = 100f;
-    private float currentHealth;
+    public float currentHealth;
 
     [SerializeField]
     private Image HealthFill;
@@ -151,5 +152,11 @@ public class PlayerStats : MonoBehaviour
     {
         GetComponent<AudioSource>().PlayOneShot(Boire);
         drinktime = Time.time;
+        currentWater = maxWater;
+    }
+
+    public void Damages(int damage)
+    {
+        currentHealth -= damage;
     }
 }

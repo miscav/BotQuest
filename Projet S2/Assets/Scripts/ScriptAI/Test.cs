@@ -10,71 +10,78 @@ public class Test : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
 
     public float health;
-
-    public Player playerBis;
+    public bool isDead;
+    
+    public int damages = 20;
 
     Animator animator;
 
-    const string STAND_STATE = "Stand";
-    const string RUN_STATE = "Run";
-    const string DAMAGE_BOT_STATE = "DamageBot";
-    const string ISDEFEATED_STATE = "IsDefeated";
     const string WALK_STATE = "Walk";
-    const string DAMAGE_PLAYER_STATE = "DamagePlayer";
-
+    const string DAMAGE_STATE = "TakeDamage";
+    const string DEATH_STATE = "Death";
+    const string ATTACK1_STATE = "Attack1";
+    int maxHealth = 200;
+    
     public string currentAction;
 
-    //Patroling
+   
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
 
-    //Attacking
+
+    public float timeBeforeDeath;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
-    public GameObject projectile;
+    
 
-    //States
+   
     public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public bool playerInSightRange, playerInAttackRange,receiveDamage;
 
     private void Awake()
     {
+        
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        //player = GameObject.Find("Player").transform;
+        
         agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
     {
-        //Check for sight and attack range
+        
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange)
+        if (!playerInSightRange && !playerInAttackRange && !isDead)
         {
+            
             ResetAnimation();
             currentAction = WALK_STATE;
             animator.SetBool("Walk", true);
+            
             Patroling();
         }
-        if (playerInSightRange && !playerInAttackRange)
+        if (playerInSightRange && !playerInAttackRange && !isDead)
         {
+            
             ResetAnimation();
-            currentAction = RUN_STATE;
-            animator.SetBool("Run", true);
+
+            currentAction = WALK_STATE;
+            animator.SetBool("Walk", true);
             ChasePlayer();
             
         }
         if (playerInAttackRange && playerInSightRange)
         {
+            
             ResetAnimation();
-            currentAction = DAMAGE_PLAYER_STATE;
-            animator.SetBool("DamagePlayer", true);
+            currentAction = ATTACK1_STATE;
+            animator.SetBool("Attack1", true);
             AttackPlayer();
         }
-
+ 
     }
 
     private void Patroling()
@@ -93,13 +100,13 @@ public class Test : MonoBehaviour
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        //Walkpoint reached
+        
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
     }
     private void SearchWalkPoint()
     {
-        //Calculate random point in range
+      
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
@@ -117,20 +124,13 @@ public class Test : MonoBehaviour
     private void AttackPlayer()
     {
         
-        //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
 
-        if (!alreadyAttacked)
+        if (!alreadyAttacked && health > 0)
         {
-            ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 20f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 6f, ForceMode.Impulse);
-            ///End of attack code
-            
-            //ENLEVER DE LA VIE A PLAYERBIS
+            PlayerStats.instance.Damages(damages);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -138,23 +138,42 @@ public class Test : MonoBehaviour
     }
     private void ResetAttack()
     {
+        
         alreadyAttacked = false;
     }
 
     public void TakeDamage(int damage)
     {
+        
+        receiveDamage = true;
         health -= damage;
-        ResetAnimation();
-        currentAction = DAMAGE_BOT_STATE;
-        animator.SetBool("DamageBot", true);
+        if (health <= 0)
+        {
+            Invoke(nameof(DestroyEnemy), 0);
+            isDead = true;
+        }
+        else Invoke(nameof(dmg), 0);
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+
     }
+    private void dmg()
+    {
+        ResetAnimation();
+        currentAction = DAMAGE_STATE;
+        animator.SetBool("TakeDamage", true);
+    }
+    
     private void DestroyEnemy()
     {
         ResetAnimation();
-        currentAction = ISDEFEATED_STATE;
-        animator.SetBool("IsDefeated", true);
+        currentAction = DEATH_STATE;
+        animator.SetBool("Death", true);
+        Invoke("TimeBD", 4);
+    }
+
+    
+    void TimeBD()
+    {
         Destroy(gameObject);
     }
 
@@ -168,12 +187,10 @@ public class Test : MonoBehaviour
 
     private void ResetAnimation()
     {
-        animator.SetBool(RUN_STATE, false);
         animator.SetBool(WALK_STATE, false);
-        animator.SetBool(ISDEFEATED_STATE, false);
-        animator.SetBool(DAMAGE_BOT_STATE, false);
-        animator.SetBool(DAMAGE_PLAYER_STATE, false);
-        animator.SetBool(STAND_STATE, false);
+        animator.SetBool(DEATH_STATE, false);
+        animator.SetBool(DAMAGE_STATE, false);
+        animator.SetBool(ATTACK1_STATE, false);
     }
 }
 

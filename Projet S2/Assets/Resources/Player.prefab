@@ -2383,7 +2383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3144255605705616884
 Transform:
   m_ObjectHideFlags: 0
@@ -2753,6 +2753,7 @@ GameObject:
   - component: {fileID: 3144255603923012717}
   - component: {fileID: 3144255603923012718}
   - component: {fileID: 3144255603923012719}
+  - component: {fileID: 9221557684327665407}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2778,7 +2779,7 @@ Transform:
   - {fileID: 3144255604284459750}
   - {fileID: 3144255605404646424}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -115.674, z: 0}
 --- !u!95 &1486330710655237941
 Animator:
@@ -2812,7 +2813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef452ebf8b1156b41a10ea28a87ab77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
+  Health: 200
   sonmarche: {fileID: 8300000, guid: b4cc762f8b5c9c34aa7948d1b04bb76c, type: 3}
   delaybetweenstep: 0
   Boussole: {fileID: 0}
@@ -2998,6 +2999,7 @@ MonoBehaviour:
   sonmort: {fileID: 8300000, guid: b3e02aa16a5cced4c80673d6301a1e9e, type: 3}
   sondegat: {fileID: 8300000, guid: 0e896affa449a944f82d865f2cf0ae71, type: 3}
   maxHealth: 100
+  currentHealth: 0
   HealthFill: {fileID: 0}
   HealthDecreaseRateForWaterAndHunger: 0
   maxHunger: 100
@@ -3006,6 +3008,25 @@ MonoBehaviour:
   maxWater: 100
   WaterFill: {fileID: 0}
   WaterDecreaseRate: 0
+--- !u!114 &9221557684327665407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3683889152679791850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338673337eb6df948aeeee93fec45ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  equipmentSystem: {fileID: 0}
+  attackRange: 3
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  attackOffSet: {x: 0, y: 0, z: 0}
 --- !u!1 &3708263040511661908
 GameObject:
   m_ObjectHideFlags: 0

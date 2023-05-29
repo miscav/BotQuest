@@ -22,6 +22,7 @@ public class Player : Personnages
     private float time3;
     private float cheatedtime;
     public float rotateSpeed = 180.0f;
+    
     [SerializeField] private GameObject ChatPannel;
 
     [SerializeField] private GameObject BalancePanel;
