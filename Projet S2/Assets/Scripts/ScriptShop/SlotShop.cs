@@ -15,7 +15,10 @@ public class SlotShop : MonoBehaviour
 
     private void Start()
     {
-        AllItems.Add(Item);
+        if (!AllItems.Contains(Item))
+        {
+            AllItems.Add(Item);
+        }
         inventory = Inventory.instance;
         Instance = this;
     }

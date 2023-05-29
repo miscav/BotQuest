@@ -29,12 +29,9 @@ public class Cam : MonoBehaviour
     void Start()
     {
         ray = new Ray(transform.position, transform.forward * 10);
-        Text.SetActive(false);
         Terminer.SetActive(false);
         Abandonner.SetActive(false);
-        Text.SetActive(false);
         Interaction.SetActive(false);
-        ShopPanel.SetActive(false);
         Repaired = false;
         WinScreen.SetActive(false);
         wintime = 0;
@@ -49,7 +46,7 @@ public class Cam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(chattime!=0 && Time.time - chattime > 3) 
+        if (chattime!=0 && Time.time - chattime > 3) 
         {
             ChatPanel.SetActive(false);
             chattime = 0;
@@ -194,7 +191,6 @@ public class Cam : MonoBehaviour
     public void Kill()
     {
         Text.SetActive(false);
-        player.ReceiveDamages(player.GetHealth());
         Close();
     }
 

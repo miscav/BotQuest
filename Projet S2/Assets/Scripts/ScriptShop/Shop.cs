@@ -59,6 +59,8 @@ public class Shop : MonoBehaviour
     {
         var list = SlotShop.AllItems;
 
+        Debug.Log(list.Count);
+
         for(int i = 0; i < list.Count; i++)
         {
             SlotShop slot = Content.transform.GetChild(i).GetComponent<SlotShop>();

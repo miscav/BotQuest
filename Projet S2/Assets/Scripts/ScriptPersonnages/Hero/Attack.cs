@@ -43,7 +43,6 @@ public class Attack : MonoBehaviour
         {
             if (hit.transform.CompareTag("Enemy"))
             {
-                Debug.Log("AHHHHHHHHHHHHHHHH");
                 Test enemy = hit.transform.GetComponent<Test>();
                 enemy.TakeDamage(200);
             }

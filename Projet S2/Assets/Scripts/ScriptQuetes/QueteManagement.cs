@@ -24,13 +24,11 @@ public class QueteManagement : MonoBehaviour
     {
         if(QuetesActuelle == null)
         {
-            Debug.Log("non");
             quetepanel.SetActive(false);
         }
         else
         {
             quetepanel.SetActive(true);
-            Debug.Log("oui");
         }
     }
 

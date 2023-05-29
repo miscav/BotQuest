@@ -28,7 +28,6 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         Content = new List<ItemsData>();
-        CloseInventory();
         CloseActionItemPanel();
         QueteManagement.inventory = this;
     }

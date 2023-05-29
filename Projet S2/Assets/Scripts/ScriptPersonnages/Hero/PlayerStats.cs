@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 
 
@@ -75,6 +76,7 @@ public class PlayerStats : MonoBehaviour
     private void Update()
     {
         UpdateHungerAndWaterBar();
+        UpdateHPbar();
         var time =Time.time;
 
         if (drinktime != 0 && time - drinktime > 3)
@@ -108,19 +110,26 @@ public class PlayerStats : MonoBehaviour
         {
             currentHealth -= damage;
         }
-
-        if(currentHealth <= 0 && IsAlive)
-        {
-            IsAlive = false;
-            GetComponent<AudioSource>().PlayOneShot(sonmort);
-            Debug.Log("Player died");
-        }
-        UpdateHPbar();
     }
 
     private void UpdateHPbar()
     {
         HealthFill.fillAmount = currentHealth / maxHealth;
+
+        if (currentHealth <= 0 && IsAlive)
+        {
+            IsAlive = false;
+            player.IsALIVE = false;
+            GetComponent<AudioSource>().PlayOneShot(sonmort);
+            currentHealth = maxHealth;
+            currentHunger = maxHunger;
+            currentWater = maxWater;
+            GO.Dead();
+        }
+        else
+        {
+            IsAlive = true;
+        }
     }
 
     private void UpdateHungerAndWaterBar()

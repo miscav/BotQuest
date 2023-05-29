@@ -30,7 +30,6 @@ public class ActionTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("qqch");
         if (other.CompareTag("Item"))
         {
             Debug.Log("item");
