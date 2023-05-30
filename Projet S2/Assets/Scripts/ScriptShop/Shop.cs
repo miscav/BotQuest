@@ -65,7 +65,7 @@ public class Shop : MonoBehaviour
         {
             SlotShop slot = Content.transform.GetChild(i).GetComponent<SlotShop>();
 
-            slot.gameObject.GetComponent<Image>().sprite = list[i].Visual;
+            slot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = list[i].Visual;
             slot.Item = list[i];
         }
     }

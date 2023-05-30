@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: fishing_rod
   m_EditorClassIdentifier: 
   Name: fishing_rod
-  Visual: {fileID: 21300000, guid: 788fc8cc359c9e44ea34885ac5c19621, type: 3}
+  Visual: {fileID: 21300000, guid: 6c1992207cabde64f9dd72c70d96c330, type: 3}
   Prefab: {fileID: 919132149155446097, guid: f5eda6308300cae48b1c1eab0ba79b15, type: 3}
   itemType: 3
   Price: 20

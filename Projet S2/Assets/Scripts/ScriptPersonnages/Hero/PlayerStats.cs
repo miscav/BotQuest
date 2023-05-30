@@ -94,22 +94,26 @@ public class PlayerStats : MonoBehaviour
             drunktime = 0;
             ChatPannel.SetActive(false);
         }
+        regenhp();
     }
 
     private void TakeDamage(float damage, bool overTime = false)
     {
-        if(Time.time > prochaine)
+        if (IsAlive)
         {
-            GetComponent<AudioSource>().PlayOneShot(sondegat);
-            prochaine = Time.time + 3;
-        }
-        if (overTime)
-        {
-            currentHealth -= damage * Time.deltaTime;
-        }
-        else
-        {
-            currentHealth -= damage;
+            if(Time.time > prochaine)
+            {
+                GetComponent<AudioSource>().PlayOneShot(sondegat);
+                prochaine = Time.time + 3;
+            }
+            if (overTime)
+            {
+                currentHealth -= damage * Time.deltaTime;
+            }
+            else
+            {
+                currentHealth -= damage;
+            }
         }
     }
 
@@ -123,6 +127,7 @@ public class PlayerStats : MonoBehaviour
             player.IsALIVE = false;
             GetComponent<AudioSource>().PlayOneShot(sonmort);
             GO.Dead();
+            currentHealth = 1;
         }
         else
         {
@@ -169,6 +174,11 @@ public class PlayerStats : MonoBehaviour
 
     public void Damages(int damage)
     {
+        if (Time.time > prochaine)
+        {
+            GetComponent<AudioSource>().PlayOneShot(sondegat);
+            prochaine = Time.time + 3;
+        }
         currentHealth -= damage;
     }
 
@@ -182,16 +192,28 @@ public class PlayerStats : MonoBehaviour
     public void Eat(ItemsData item)
     {
         //CÉ BON MIAM
-        Debug.Log("entré dans eat");
         if (item != null && item.itemType == ItemsData.ItemType.Food)
         {
             
             currentHunger += ((Food)item).PV;
-            Debug.Log("bouffe monté");
             if (currentHunger > maxHunger) 
             {
                 currentHunger = maxHunger;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "VolcanTrou")
+            currentHealth = -1;
+    }
+
+    private void regenhp()
+    {
+        if(currentHunger > 80 && currentWater > 80 && currentHealth < maxHealth)
+        {
+            currentHealth += 3*Time.deltaTime;
         }
     }
 }

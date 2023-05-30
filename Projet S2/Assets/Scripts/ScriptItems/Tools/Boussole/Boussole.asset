@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boussole
   m_EditorClassIdentifier: 
   Name: Boussole
-  Visual: {fileID: 21300000, guid: 80e40bb6173f0844eb4c3ac94f82237a, type: 3}
+  Visual: {fileID: 21300000, guid: 3e9d9e9e099e16e4e8f76df848b04a91, type: 3}
   Prefab: {fileID: 919132149155446097, guid: d50aed8ff386b84448b4072aef700a75, type: 3}
   itemType: 3
   Price: 500

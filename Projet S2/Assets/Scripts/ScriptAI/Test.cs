@@ -122,8 +122,7 @@ public class Test : MonoBehaviour
     }
 
     private void AttackPlayer()
-    {
-        
+    {        
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);

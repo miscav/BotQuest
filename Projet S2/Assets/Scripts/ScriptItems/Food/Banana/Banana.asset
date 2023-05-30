@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Banana
   m_EditorClassIdentifier: 
   Name: Banana
-  Visual: {fileID: 21300000, guid: 66a07df72437df1459552cd7bd63916f, type: 3}
+  Visual: {fileID: 21300000, guid: f917db483926ff94e8388229d3026783, type: 3}
   Prefab: {fileID: 100000, guid: 461f0170c82b53340a9812199b63bbd4, type: 3}
   itemType: 1
   Price: 5

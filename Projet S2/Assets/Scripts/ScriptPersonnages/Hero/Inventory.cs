@@ -1,3 +1,4 @@
+using Photon.Chat;
 using Photon.Pun.Demo.Cockpit.Forms;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,9 +18,14 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject RepairButton;
     [SerializeField] private GameObject DestroyButton;
     [SerializeField] private GameObject TextPieces;
+    [SerializeField] private GameObject ChatPanel;
     [SerializeField] private Sprite Transparent;
     private int Pieces;
     private int MaxPieces;
+    private float time1;
+    private float time2;
+    private float time3;
+    private float cheatedtime;
 
     public static Inventory instance;
 
@@ -35,7 +41,8 @@ public class Inventory : MonoBehaviour
         CloseActionItemPanel();
         QueteManagement.inventory = this;
         Pieces = 0;
-        MaxPieces = 10;
+        MaxPieces = 4;
+        time1 = 0; time2 = 0; time3 = 0;
     }
 
     void Update()
@@ -45,6 +52,44 @@ public class Inventory : MonoBehaviour
             Refresh();
             inventoryPanel.SetActive(!inventoryPanel.activeSelf);
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            //test
+            Debug.Log("premier chiffre");
+            time1 = Time.time;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            if (time1 != 0 && Time.time - time1 < 2)
+                time2 = Time.time;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            if (time2 != 0 && Time.time - time2 < 2 && time2 > time1)
+                time3 = Time.time;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            if (time3 != 0 && Time.time - time3 < 2 && time3 > time2)
+            {
+                Debug.Log("vous vous ête Give toute les pièces");
+                ChatPanel.GetComponent<Text>().text = "vous vous ête Give toute les pièces";
+                cheatedtime = Time.time;
+                ChatPanel.SetActive(true);
+                Pieces = MaxPieces;
+            }
+        }
+
+        if (cheatedtime != 0 && Time.time - cheatedtime > 3)
+        {
+            ChatPanel.SetActive(false);
+            cheatedtime = 0;
+        }
+
     }
 
     public void CloseInventory()

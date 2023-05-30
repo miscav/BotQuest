@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hammer
   m_EditorClassIdentifier: 
   Name: Hammer
-  Visual: {fileID: 0}
+  Visual: {fileID: 21300000, guid: abe3bedb6238a3449be3267daf907a9b, type: 3}
   Prefab: {fileID: 8591273635324488586, guid: 82f1e40c0cf7c5048a41bfa78b10c9d9, type: 3}
   itemType: 3
   Price: 250

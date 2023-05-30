@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Cam : MonoBehaviour
@@ -18,7 +19,9 @@ public class Cam : MonoBehaviour
     public AudioClip sonClic;
     [SerializeField] public GameObject ChatPanel;
     private float chattime;
-    
+    [SerializeField] public GameObject MyCreditsscenepanel;
+    public bool haswin;
+
 
     [SerializeField] private GameObject WinScreen;
     [SerializeField] private AudioClip reparation;
@@ -44,6 +47,8 @@ public class Cam : MonoBehaviour
         ChatPanel.SetActive(false);
         chattime= 0;
         inventory = Inventory.instance;
+        haswin= false;
+        MyCreditsscenepanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,10 +62,19 @@ public class Cam : MonoBehaviour
 
         if (wintime != 0 && Time.time - wintime > 10)
         {
-            Debug.Log("vous avez gagné");
             player.Reparation.SetActive(false);
             WinScreen.SetActive(true);
+            haswin = true;
             player.ischeated = true;
+        }
+
+        if(haswin)
+        {
+            MyCreditsscenepanel.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene("CreditsScene");
+            }
         }
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3) && !Repaired)
@@ -70,10 +84,6 @@ public class Cam : MonoBehaviour
                 QueteVise = hit.collider.gameObject.GetComponent<QueteManagement>();
                 QueteVise.init();
 
-                if(QueteVise.quete == null) 
-                {
-                    Debug.Log("soucis");
-                }
 
                 Interaction.GetComponentInChildren<Text>().text = "Talk";
                 Interaction.SetActive(true);
@@ -99,7 +109,6 @@ public class Cam : MonoBehaviour
                                 ChatPanel.GetComponent<Text>().text = "Une quête est déjà en cours !";
                                 ChatPanel.SetActive(true);
                                 chattime = Time.time;
-                                Debug.Log("Quete déjà en cours !");
                             }
                         }
                         else
@@ -117,7 +126,6 @@ public class Cam : MonoBehaviour
                         ChatPanel.GetComponent<Text>().text = "Vous avez déjà fait cette quête !";
                         ChatPanel.SetActive(true);
                         chattime = Time.time;
-                        Debug.Log("Plus de quetes disponibles");
                     }
                 }
             }
@@ -156,7 +164,12 @@ public class Cam : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Vous n'avez pas assez de pieces !");
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        ChatPanel.GetComponent<Text>().text = "Vous n'avez pas toutes les pièces nécéssaires";
+                        ChatPanel.SetActive(true);
+                        chattime = Time.time;
+                    }
                 }
             }
             else
@@ -183,8 +196,6 @@ public class Cam : MonoBehaviour
         }
         else
         {
-            Debug.Log("Une quete est deja en cours !");
-
             Close();
         }
     }
@@ -230,7 +241,6 @@ public class Cam : MonoBehaviour
             ChatPanel.GetComponent<Text>().text = "Vous n'avez pas terminé la quete !";
             ChatPanel.SetActive(true);
             chattime = Time.time;
-            Debug.Log("Vous n'avez pas terminé la quete !");
         }
         Close();
     }

@@ -104,7 +104,6 @@ public class Player : MonoBehaviourPunCallbacks
                 {
                     if (time3 != 0 && Time.time - time3 < 2 && time3 > time2)
                     {
-                        Debug.Log("vous vous désormais cheaté");
                         ChatPannel.GetComponent<Text>().text = "With great power comes great responsibility";
                         cheatedtime = Time.time;
                         ChatPannel.SetActive(true);
