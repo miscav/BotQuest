@@ -26,6 +26,7 @@ public class Cam : MonoBehaviour
     private bool Repaired;
     private RaycastHit hit;
 
+    private Inventory inventory;
 
     void Start()
     {
@@ -42,6 +43,7 @@ public class Cam : MonoBehaviour
         // playerStats = gameObject.GetComponentInParent<PlayerStats>();
         ChatPanel.SetActive(false);
         chattime= 0;
+        inventory = Inventory.instance;
     }
 
     // Update is called once per frame
@@ -145,9 +147,16 @@ public class Cam : MonoBehaviour
                 Interaction.GetComponentInChildren<Text>().text = "Repair";
                 Interaction.SetActive(true);
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if(inventory.EnoughPieces())
                 {
-                    Repair();
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        Repair();
+                    }
+                }
+                else
+                {
+                    Debug.Log("Vous n'avez pas assez de pieces !");
                 }
             }
             else
@@ -214,6 +223,7 @@ public class Cam : MonoBehaviour
             ChatPanel.SetActive(true);
             chattime = Time.time;
             QueteVise.Reussi(QueteManagement.QuetesActuelle.ItemToBring);
+            inventory.AddPiece();
         }
         else
         {

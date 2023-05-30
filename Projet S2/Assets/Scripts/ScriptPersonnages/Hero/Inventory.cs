@@ -15,7 +15,10 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject EquipButton;
     [SerializeField] private GameObject RepairButton;
     [SerializeField] private GameObject DestroyButton;
+    [SerializeField] private GameObject TextPieces;
     [SerializeField] private Sprite Transparent;
+    private int Pieces;
+    private int MaxPieces;
 
     public static Inventory instance;
 
@@ -30,6 +33,8 @@ public class Inventory : MonoBehaviour
         Content = new List<ItemsData>();
         CloseActionItemPanel();
         QueteManagement.inventory = this;
+        Pieces = 0;
+        MaxPieces = 10;
     }
 
     void Update()
@@ -94,6 +99,8 @@ public class Inventory : MonoBehaviour
 
     public void Refresh()
     {
+        TextPieces.GetComponent<Text>().text = Pieces.ToString() + " / 10 Pieces";
+
         for (int i = 0; i < Content.Count; i++)
         {
             Slot slot = SlotContent.transform.GetChild(i).GetComponent<Slot>();
@@ -113,7 +120,7 @@ public class Inventory : MonoBehaviour
     public void OpenActionItemPanel(ItemsData item)
     {
         Refresh();
-        // use drop equip repair destroy
+
         switch (item.itemType)
         {
             case ItemsData.ItemType.Weapon:
@@ -155,5 +162,16 @@ public class Inventory : MonoBehaviour
     public void CloseActionItemPanel()
     {
         ActionItemPanel.SetActive(false);
+    }
+
+    public void AddPiece()
+    {
+        Pieces += 1;
+        Debug.Log("1");
+    }
+
+    public bool EnoughPieces()
+    {
+        return Pieces == MaxPieces;
     }
 }

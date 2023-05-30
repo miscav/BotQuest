@@ -22,7 +22,7 @@ public class Slot : MonoBehaviour
     public void Use()
     {
         Playerstat.Eat(ItemSelected);
-        Debug.Log("objet utilisé");
+        Inventory.instance.Remove(ItemSelected);
     }
     public void Drop()
     {
