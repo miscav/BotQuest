@@ -6,7 +6,7 @@ public class Slot : MonoBehaviour
     public ItemsData Item;
     public static ItemsData ItemSelected;
     public Sprite Visual;
-    [SerializeField] private GameObject Player;
+    public static PlayerStats Playerstat;
 
 
     public void OnClickSlot()
@@ -21,7 +21,8 @@ public class Slot : MonoBehaviour
     }
     public void Use()
     {
-        Player.GetComponent<Player>().Eat(ItemSelected); 
+        Playerstat.Eat(ItemSelected);
+        Debug.Log("objet utilisé");
     }
     public void Drop()
     {

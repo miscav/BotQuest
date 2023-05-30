@@ -18,6 +18,7 @@ public class Cam : MonoBehaviour
     public AudioClip sonClic;
     [SerializeField] public GameObject ChatPanel;
     private float chattime;
+    
 
     [SerializeField] private GameObject WinScreen;
     [SerializeField] private AudioClip reparation;
@@ -55,6 +56,7 @@ public class Cam : MonoBehaviour
         if (wintime != 0 && Time.time - wintime > 10)
         {
             Debug.Log("vous avez gagné");
+            player.Reparation.SetActive(false);
             WinScreen.SetActive(true);
             player.ischeated = true;
         }
@@ -230,6 +232,7 @@ public class Cam : MonoBehaviour
 
     public void Repair()
     {
+        player.Reparation.SetActive(true);
         var time = Time.time;
         GetComponent<AudioSource>().PlayOneShot(reparation);
         wintime = Time.time;

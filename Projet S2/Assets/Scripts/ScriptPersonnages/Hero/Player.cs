@@ -30,6 +30,9 @@ public class Player : MonoBehaviourPunCallbacks
     private GameObject ShopPanel;
     private GameObject QuetePanel;
     public bool IsALIVE;
+    public  GameObject Drinking;
+    public GameObject Reparation;
+
 
     [SerializeField] private GameObject ChatPannel;
 
@@ -45,10 +48,14 @@ public class Player : MonoBehaviourPunCallbacks
         QuetePanel = GameObject.Find("Canvas/Quete");
         ChatPannel = GameObject.Find("CameraPlayer").GetComponent<Cam>().ChatPanel;
         Boussole = GameObject.Find("Canvas/Boussole").GetComponent<Image>();
+        Drinking = GameObject.Find("Drinking");
+        Reparation = GameObject.Find("Reparation");
 
         InventoryPanel.SetActive(false);
         ShopPanel.SetActive(false);
         QuetePanel.SetActive(false);
+        Drinking.SetActive(false);
+        Reparation.SetActive(false);
 
         IsGrounded = false;
         Speed = 5f;
@@ -61,8 +68,8 @@ public class Player : MonoBehaviourPunCallbacks
         player = this;
         Cam.player = this;
         GO.player = this;
-
         IsALIVE = true;
+
     }
 
     void Update()
@@ -128,15 +135,6 @@ public class Player : MonoBehaviourPunCallbacks
 
                 if (Character.velocity.y < 0 && Character.isGrounded) playerVelocity.y = 0f;
 
-                Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-                Character.Move(transform.right * move.x * Time.deltaTime * Speed * run);
-                Character.Move(transform.forward * move.z * Time.deltaTime * Speed * run);
-
-                if (move != new Vector3(0, 0, 0) && Time.time > nextPlay && Character.isGrounded)
-                {
-                    nextPlay = Time.time + delaybetweenstep;
-                    GetComponent<AudioSource>().PlayOneShot(sonmarche);
-                }
 
                 if (Character.isGrounded || IsGrounded)
                 {
@@ -153,15 +151,21 @@ public class Player : MonoBehaviourPunCallbacks
 
                 playerVelocity.y += Gravity * Time.deltaTime;
 
-                Character.Move(playerVelocity * Time.deltaTime);
-
-                run = 1f;
-
-                if (!InventoryPanel.activeSelf && !QuetePanel.activeSelf && !ShopPanel.activeSelf)
+                if (!InventoryPanel.activeSelf && !QuetePanel.activeSelf && !ShopPanel.activeSelf && !Drinking.activeSelf && !Reparation.activeSelf)
                 {
+                    Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                    Character.Move((transform.right * move.x * Time.deltaTime * Speed * run) + (transform.forward * move.z * Time.deltaTime * Speed * run));
+                    Character.Move(playerVelocity * Time.deltaTime);
                     transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.fixedDeltaTime * rotateSpeed);
                     Boussole.transform.Rotate(new Vector3(0, 0, Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed);
+                    if (move != new Vector3(0, 0, 0) && Time.time > nextPlay && Character.isGrounded)
+                    {
+                        nextPlay = Time.time + delaybetweenstep;
+                        GetComponent<AudioSource>().PlayOneShot(sonmarche);
+                    }
                 }
+
+                run = 1f;
             }
         }
         
@@ -173,10 +177,6 @@ public class Player : MonoBehaviourPunCallbacks
         RefreshBalance();
     }
 
-    public void Eat(ItemsData item)
-    {
-        
-    }
 
     private void RefreshBalance()
     {

@@ -2603,6 +2603,8 @@ MonoBehaviour:
   ischeated: 0
   rotateSpeed: 180
   IsALIVE: 0
+  Drinking: {fileID: 0}
+  Reparation: {fileID: 0}
   ChatPannel: {fileID: 0}
   BalancePanel: {fileID: 0}
 --- !u!143 &3144255603923012727

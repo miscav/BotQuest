@@ -465,6 +465,7 @@
 "Assets/FloatingEntities/Scripts/SplashGenerator.cs"
 "Assets/FloatingEntities/Scripts/Tools/Proxies.cs"
 "Assets/FloatingEntities/Scripts/WakeGenerator.cs"
+"Assets/GO.cs"
 "Assets/IA/followingAI.cs"
 "Assets/IgniteCoders/Simple Water Shader/Info/Scripts/Readme.cs"
 "Assets/IgniteCoders/Simple Water Shader/Resources/WaterReflection.cs"

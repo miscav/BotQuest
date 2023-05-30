@@ -51,6 +51,7 @@ public class PlayerStats : MonoBehaviour
     private float WaterDecreaseRate;
     private void Start()
     {
+        GO.playerStats = this;
         ChatPannel = GameObject.Find("CameraPlayer").GetComponent<Cam>().ChatPanel;
         HealthFill=GameObject.Find("Canvas/ATH/HP/HealthFill").GetComponent<Image>();
         HungerFill = GameObject.Find("Canvas/ATH/Hunger/HungerFill").GetComponent<Image>();
@@ -71,18 +72,18 @@ public class PlayerStats : MonoBehaviour
         ChatPannel.SetActive(false);
 
         Cam.playerStats = this;
+        Slot.Playerstat = this;
     }
 
     private void Update()
     {
         UpdateHungerAndWaterBar();
         UpdateHPbar();
-        var time =Time.time;
-
-        if (drinktime != 0 && time - drinktime > 3)
+        if (drinktime != 0 && Time.time - drinktime > 3)
         {
             drinktime = 0;
             currentWater = maxWater;
+            player.Drinking.SetActive(false);
             ChatPannel.GetComponent<Text>().text = "Vous êtes maintenant désaltéré !";
             ChatPannel.SetActive(true);
             drunktime= Time.time;
@@ -121,9 +122,6 @@ public class PlayerStats : MonoBehaviour
             IsAlive = false;
             player.IsALIVE = false;
             GetComponent<AudioSource>().PlayOneShot(sonmort);
-            currentHealth = maxHealth;
-            currentHunger = maxHunger;
-            currentWater = maxWater;
             GO.Dead();
         }
         else
@@ -154,6 +152,11 @@ public class PlayerStats : MonoBehaviour
 
     public void ReceiveDamage(float damage)
     {
+        if (Time.time > prochaine)
+        {
+            GetComponent<AudioSource>().PlayOneShot(sondegat);
+            prochaine = Time.time + 3;
+        }
         currentHealth -= damage;
     }
 
@@ -161,11 +164,34 @@ public class PlayerStats : MonoBehaviour
     {
         GetComponent<AudioSource>().PlayOneShot(Boire);
         drinktime = Time.time;
-        currentWater = maxWater;
+        player.Drinking.SetActive(true);
     }
 
     public void Damages(int damage)
     {
         currentHealth -= damage;
+    }
+
+    public void ResetStat()
+    {
+        currentHealth = maxHealth;
+        currentHunger = maxHunger;
+        currentWater = maxWater;
+    }
+
+    public void Eat(ItemsData item)
+    {
+        //CÉ BON MIAM
+        Debug.Log("entré dans eat");
+        if (item != null && item.itemType == ItemsData.ItemType.Food)
+        {
+            
+            currentHunger += ((Food)item).PV;
+            Debug.Log("bouffe monté");
+            if (currentHunger > maxHunger) 
+            {
+                currentHunger = maxHunger;
+            }
+        }
     }
 }
