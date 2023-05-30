@@ -32,7 +32,6 @@ public class ActionTrigger : MonoBehaviour
     {
         if (other.CompareTag("Item"))
         {
-            Debug.Log("item");
             PickUpPanel.GetComponentInChildren<Text>().text = "Pick Up";
             Item = other.gameObject;
             PickUpPanel.SetActive(true);

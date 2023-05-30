@@ -1,3 +1,4 @@
+using Photon.Pun.Demo.Cockpit.Forms;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -94,7 +95,13 @@ public class Inventory : MonoBehaviour
     public void Drop(ItemsData item)
     {
         Remove(item);
-        Instantiate(item.Prefab, Player.player.transform);
+        GameObject drop = Instantiate(item.Prefab);
+        drop.tag = "Item";
+        drop.AddComponent<Items>();
+        drop.GetComponent<Items>().Name = item.Name;
+        drop.GetComponent<Items>().dataItem = item;
+        drop.AddComponent<BoxCollider>();
+        drop.transform.position = Player.player.transform.position;
     }
 
     public void Refresh()
